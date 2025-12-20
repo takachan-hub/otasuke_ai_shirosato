@@ -123,6 +123,10 @@ figcaption{ color: var(--muted); font-size: .85rem; margin-top:.5rem; }
   display:grid;
   gap: 6px;
 }
+/* hidden属性を確実に効かせる（スマホメニュー開閉用） */
+.mobile-nav[hidden]{
+  display: none !important;
+}
 .mobile-nav a{
   padding: 12px 12px;
   border-radius: 12px;
