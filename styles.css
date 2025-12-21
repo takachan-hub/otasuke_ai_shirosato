@@ -77,13 +77,21 @@ figcaption{ color: var(--muted); font-size: .85rem; margin-top:.5rem; }
   min-width: 260px;
 }
 .brand-mark{
-  width:42px;height:42px;
-  display:grid;place-items:center;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--brand), var(--brand2));
-  font-weight: 800;
-  letter-spacing: .04em;
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: none; /* 四角い枠（緑グラデ）を消す */
 }
+
+.brand-mark img{
+  width:42px;
+  height:42px;
+  object-fit: contain;
+  display:block;
+}
+
 .brand-name{ margin:0; font-weight: 800; }
 .brand-sub{ margin:0; color: var(--muted); font-size: .9rem; }
 
