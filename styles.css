@@ -77,8 +77,8 @@ figcaption{ color: var(--muted); font-size: .85rem; margin-top:.5rem; }
   min-width: 260px;
 }
 .brand-mark{
-  width:42px;
-  height:42px;
+  width:48px;
+  height:48px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -86,8 +86,8 @@ figcaption{ color: var(--muted); font-size: .85rem; margin-top:.5rem; }
 }
 
 .brand-mark img{
-  width:42px;
-  height:42px;
+  width:48px;
+  height:48px;
   object-fit: contain;
   display:block;
 }
