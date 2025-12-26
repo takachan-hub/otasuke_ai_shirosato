@@ -398,33 +398,20 @@ p{ margin: 0 0 12px; }
 }
 
 
-/* ========= Pricing ========= */
-.price-box .price{
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: #eaf3ee;
-}
-.price-box .em{
-  color: #dff3e8;
-  font-weight: 900;
-}
-.price-list .price-label{
+/* Pricing */
+.price-lead{ margin: 0 0 6px; }
+.price-amount{
   display:inline-block;
-  margin-right: 8px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.04);
-  color: var(--text);
-  font-weight: 800;
-  font-size: .85rem;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: .02em;
 }
-.price-note{
-  background: rgba(255,255,255,.03);
+@media (max-width: 640px){
+  .price-amount{ font-size: 30px; }
 }
 
 /* LINE contact */
-.line-card { text-align: center; }
+.line-card{ text-align: center; }
 .line-cta{
   display: grid;
   gap: 12px;
@@ -432,10 +419,10 @@ p{ margin: 0 0 12px; }
   text-decoration: none;
 }
 .line-qr{
-  width: 220px;
-  max-width: 80vw;
+  width: 240px;
+  max-width: 84vw;
   height: auto;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #fff;
   padding: 10px;
 }
