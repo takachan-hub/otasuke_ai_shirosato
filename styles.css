@@ -397,8 +397,21 @@ p{ margin: 0 0 12px; }
   .btn{ transition: none !important; }
 }
 
+
+/* Pricing */
+.price-lead{ margin: 0 0 6px; }
+.price-amount{
+  display:inline-block;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+@media (max-width: 640px){
+  .price-amount{ font-size: 30px; }
+}
+
 /* LINE contact */
-.line-card { text-align: center; }
+.line-card{ text-align: center; }
 .line-cta{
   display: grid;
   gap: 12px;
