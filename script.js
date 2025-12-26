@@ -3,7 +3,19 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Mobile nav
+  
+
+// LINE CTA buttons (centralized by window.LINE_CONTACT_URL)
+const lineUrl =
+  (typeof window !== "undefined" && window.LINE_CONTACT_URL) ||
+  "https://line.me/R/ti/p/@vup1475q";
+
+document.querySelectorAll("a.js-line-cta").forEach((a) => {
+  a.setAttribute("href", lineUrl);
+  a.setAttribute("target", "_blank");
+  a.setAttribute("rel", "noopener");
+});
+// Mobile nav
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.querySelector(".mobile-nav");
   if (toggle && mobileNav) {
