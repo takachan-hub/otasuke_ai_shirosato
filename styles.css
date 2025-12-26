@@ -422,3 +422,20 @@ p{ margin: 0 0 12px; }
 .price-note{
   background: rgba(255,255,255,.03);
 }
+
+/* LINE contact */
+.line-card { text-align: center; }
+.line-cta{
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  text-decoration: none;
+}
+.line-qr{
+  width: 220px;
+  max-width: 80vw;
+  height: auto;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
