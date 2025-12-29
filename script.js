@@ -45,7 +45,7 @@ document.querySelectorAll("a.js-line-cta").forEach((a) => {
     copyBtn.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(template.value);
-        if (status) status.textContent = "コピーしました。メールに貼り付けてお使いください。";
+        if (status) status.textContent = "コピーしました。メールやLINEに貼り付けてお使いください。";
       } catch (e) {
         if (status) status.textContent = "コピーできませんでした。手動で選択してコピーしてください。";
       }
