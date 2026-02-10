@@ -460,34 +460,27 @@ p{ margin: 0 0 12px; }
   color: var(--muted);
 }
 
+
 /* =========================
    料金表（一覧）
    ========================= */
-.pricing-table{
-  margin-top: 16px;
-  padding: 18px;
-}
-.card-soft{
-  background: linear-gradient(180deg, rgba(255,255,255,.03), transparent 55%), var(--card2);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-}
-.pricing-table-title{
-  margin: 0 0 12px 0;
-  font-size: 1.05rem;
+.price-table-card{ margin-top: 18px; }
+.card-title{
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: .02em;
 }
 .table-scroll{
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(0,0,0,.18);
+  background: rgba(0,0,0,.15);
 }
 .price-table{
   width: 100%;
   border-collapse: collapse;
-  min-width: 720px;
+  min-width: 620px;
 }
 .price-table th,
 .price-table td{
@@ -496,35 +489,42 @@ p{ margin: 0 0 12px; }
   vertical-align: top;
 }
 .price-table thead th{
+  position: sticky;
+  top: 0;
+  background: rgba(15,23,19,.92);
+  backdrop-filter: blur(8px);
   text-align: left;
-  font-weight: 700;
-  color: var(--text);
-  background: rgba(31,111,62,.18);
+  font-size: 13px;
+  color: var(--muted);
 }
 .price-table tbody tr:hover td{
-  background: rgba(255,255,255,.03);
+  background: rgba(42,163,86,.06);
 }
-.price-table .col-item{ width: 26%; }
-.price-table .col-desc{ width: 54%; color: var(--muted); }
-.price-table .col-price{ width: 20%; text-align: right; white-space: nowrap; font-weight: 700; }
+.price-item{ font-weight: 700; white-space: nowrap; }
+.price-fee{ font-weight: 800; white-space: nowrap; }
 
 .note{
   margin-top: 12px;
   padding: 10px 12px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(255,255,255,.02);
+  background: rgba(255,255,255,.03);
 }
 .note summary{
   cursor: pointer;
   font-weight: 700;
+  color: var(--text);
+  outline: none;
 }
-.note p{
-  margin: 10px 0 0 0;
-  color: var(--muted);
+.note summary::-webkit-details-marker{ display:none; }
+.note summary:before{
+  content: "＋";
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--brand2);
+  font-weight: 900;
 }
+.note[open] summary:before{ content:"－"; }
+.note-body{ margin-top: 8px; }
 
-@media (max-width: 640px){
-  .pricing-table{ padding: 14px; }
-  .price-table{ min-width: 640px; }
-}
+.small{ font-size: 13px; }
