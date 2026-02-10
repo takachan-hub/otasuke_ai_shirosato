@@ -13,6 +13,8 @@
   --border: rgba(255,255,255,.10);
   --shadow: 0 18px 40px rgba(0,0,0,.35);
   --radius: 18px;
+  --line-green: #06C755;
+  --line-green-hover: #05b14d;
 }
 
 *{ box-sizing: border-box; }
@@ -159,6 +161,20 @@ figcaption{ color: var(--muted); font-size: .85rem; margin-top:.5rem; }
 .btn:hover{ filter: brightness(1.05); transform: translateY(-1px); }
 .btn:active{ transform: translateY(0); }
 .btn-small{ padding: 10px 12px; font-size: .95rem; }
+
+/* LINE風：お問い合わせボタン */
+.btn-line,
+.btn.js-line-cta,
+.line-cta .btn{
+  background: var(--line-green);
+  color: #06110a;
+  border-color: rgba(0,0,0,.08);
+}
+.btn-line:hover,
+.btn.js-line-cta:hover,
+.line-cta:hover .btn{
+  background: var(--line-green-hover);
+}
 
 .btn-ghost{
   background: transparent;
@@ -459,76 +475,3 @@ p{ margin: 0 0 12px; }
   margin: 0;
   color: var(--muted);
 }
-
-
-/* =========================
-   料金表（一覧）
-   ========================= */
-.price-table-card{ margin-top: 18px; }
-.card-title{
-  margin: 0 0 10px;
-  font-size: 18px;
-  letter-spacing: .02em;
-}
-.table-scroll{
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: rgba(0,0,0,.15);
-}
-.price-table{
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 620px;
-}
-.price-table th,
-.price-table td{
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-  white-space: nowrap;
-  word-break: keep-all;
-  overflow-wrap: normal;
-  line-break: strict;
-}
-.price-table thead th{
-  position: sticky;
-  top: 0;
-  background: rgba(15,23,19,.92);
-  backdrop-filter: blur(8px);
-  text-align: left;
-  font-size: 13px;
-  color: var(--muted);
-}
-.price-table tbody tr:hover td{
-  background: rgba(42,163,86,.06);
-}
-.price-item{ font-weight: 700; white-space: nowrap; }
-.price-fee{ font-weight: 800; white-space: nowrap; }
-
-.note{
-  margin-top: 12px;
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: rgba(255,255,255,.03);
-}
-.note summary{
-  cursor: pointer;
-  font-weight: 700;
-  color: var(--text);
-  outline: none;
-}
-.note summary::-webkit-details-marker{ display:none; }
-.note summary:before{
-  content: "＋";
-  display: inline-block;
-  margin-right: 8px;
-  color: var(--brand2);
-  font-weight: 900;
-}
-.note[open] summary:before{ content:"－"; }
-.note-body{ margin-top: 8px; }
-
-.small{ font-size: 13px; }
