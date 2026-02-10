@@ -13,8 +13,6 @@
   --border: rgba(255,255,255,.10);
   --shadow: 0 18px 40px rgba(0,0,0,.35);
   --radius: 18px;
-  --line-green: #06C755;
-  --line-green-hover: #05b14d;
 }
 
 *{ box-sizing: border-box; }
@@ -161,20 +159,6 @@ figcaption{ color: var(--muted); font-size: .85rem; margin-top:.5rem; }
 .btn:hover{ filter: brightness(1.05); transform: translateY(-1px); }
 .btn:active{ transform: translateY(0); }
 .btn-small{ padding: 10px 12px; font-size: .95rem; }
-
-/* LINE風：お問い合わせボタン */
-.btn-line,
-.btn.js-line-cta,
-.line-cta .btn{
-  background: var(--line-green);
-  color: #06110a;
-  border-color: rgba(0,0,0,.08);
-}
-.btn-line:hover,
-.btn.js-line-cta:hover,
-.line-cta:hover .btn{
-  background: var(--line-green-hover);
-}
 
 .btn-ghost{
   background: transparent;
@@ -474,4 +458,73 @@ p{ margin: 0 0 12px; }
 .faq-a p{
   margin: 0;
   color: var(--muted);
+}
+
+/* =========================
+   Pricing section theme (warm white + sky blue + bright yellow)
+   Scoped to #pricing.price-theme so the rest of the site stays unchanged
+   ========================= */
+#pricing.price-theme{
+  --price-bg: #f7f6f2;          /* warm white */
+  --price-surface: #ffffff;     /* card surface */
+  --price-border: rgba(30, 90, 150, 0.18);
+  --price-text: #102030;
+  --price-muted: #4c5a6a;
+  --price-sky: #4da3ff;         /* sky blue */
+  --price-sky-deep: #2e7fe0;
+  --price-accent: #ffd84d;      /* bright yellow */
+  background: var(--price-bg);
+  color: var(--price-text);
+}
+
+#pricing.price-theme h2{
+  color: var(--price-text);
+}
+
+#pricing.price-theme .muted{
+  color: var(--price-muted);
+}
+
+#pricing.price-theme .card{
+  background: var(--price-surface);
+  border: 1px solid var(--price-border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+#pricing.price-theme .price-amount{
+  color: var(--price-sky-deep);
+}
+
+#pricing.price-theme .checklist li{
+  border-color: var(--price-border);
+}
+
+#pricing.price-theme .checklist li span{
+  color: var(--price-sky-deep);
+}
+
+#pricing.price-theme .cta-box{
+  background: rgba(77, 163, 255, 0.10);
+  border: 1px solid rgba(77, 163, 255, 0.22);
+}
+
+#pricing.price-theme .cta-title{
+  color: var(--price-text);
+}
+
+#pricing.price-theme .btn{
+  background: var(--price-sky);
+  color: #ffffff;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+#pricing.price-theme .btn:hover{
+  background: var(--price-sky-deep);
+}
+
+#pricing.price-theme .note,
+#pricing.price-theme .price-note{
+  background: rgba(255, 216, 77, 0.22);
+  border: 1px solid rgba(255, 216, 77, 0.45);
+  color: var(--price-text);
 }
