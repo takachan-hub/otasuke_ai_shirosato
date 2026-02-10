@@ -459,3 +459,72 @@ p{ margin: 0 0 12px; }
   margin: 0;
   color: var(--muted);
 }
+
+/* =========================
+   料金表（一覧）
+   ========================= */
+.pricing-table{
+  margin-top: 16px;
+  padding: 18px;
+}
+.card-soft{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), transparent 55%), var(--card2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+.pricing-table-title{
+  margin: 0 0 12px 0;
+  font-size: 1.05rem;
+}
+.table-scroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(0,0,0,.18);
+}
+.price-table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+.price-table th,
+.price-table td{
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.price-table thead th{
+  text-align: left;
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(31,111,62,.18);
+}
+.price-table tbody tr:hover td{
+  background: rgba(255,255,255,.03);
+}
+.price-table .col-item{ width: 26%; }
+.price-table .col-desc{ width: 54%; color: var(--muted); }
+.price-table .col-price{ width: 20%; text-align: right; white-space: nowrap; font-weight: 700; }
+
+.note{
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.02);
+}
+.note summary{
+  cursor: pointer;
+  font-weight: 700;
+}
+.note p{
+  margin: 10px 0 0 0;
+  color: var(--muted);
+}
+
+@media (max-width: 640px){
+  .pricing-table{ padding: 14px; }
+  .price-table{ min-width: 640px; }
+}
