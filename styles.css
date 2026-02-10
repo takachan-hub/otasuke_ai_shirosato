@@ -487,6 +487,10 @@ p{ margin: 0 0 12px; }
   padding: 12px 14px;
   border-bottom: 1px solid var(--border);
   vertical-align: top;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
 }
 .price-table thead th{
   position: sticky;
