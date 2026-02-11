@@ -236,10 +236,6 @@ p{ margin: 0 0 12px; }
 .hero-media img{
   border: 1px solid rgba(255,255,255,.08);
   box-shadow: var(--shadow);
-
-  width: 100%;
-  height: auto;
-  display: block;
 }
 .hero-media figcaption{ text-align: center; }
 
@@ -536,3 +532,15 @@ p{ margin: 0 0 12px; }
 .note-body{ margin-top: 8px; }
 
 .small{ font-size: 13px; }
+
+/* --- 画像の説明文（figcaption）を出さない --- */
+figcaption{ display:none !important; }
+
+/* --- 写真は「切らずに全部表示」 --- */
+figure.hero-media img,
+figure.media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* 切らずに全体表示 */
+}
