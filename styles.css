@@ -236,6 +236,10 @@ p{ margin: 0 0 12px; }
 .hero-media img{
   border: 1px solid rgba(255,255,255,.08);
   box-shadow: var(--shadow);
+
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .hero-media figcaption{ text-align: center; }
 
