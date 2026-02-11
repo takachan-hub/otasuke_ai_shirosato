@@ -236,9 +236,12 @@ p{ margin: 0 0 12px; }
 .hero-media img{
   border: 1px solid rgba(255,255,255,.08);
   box-shadow: var(--shadow);
-}
-.hero-media figcaption{ text-align: center; }
 
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  display: block;
+}
 .card-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -532,3 +535,8 @@ p{ margin: 0 0 12px; }
 .note-body{ margin-top: 8px; }
 
 .small{ font-size: 13px; }
+
+
+@media (max-width: 720px){
+  .hero-media img{ height: 320px; }
+}
