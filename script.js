@@ -1,54 +1,54 @@
-// お助けAI城里センター - script
-(() => {
-  const year = document.getElementById("year");
-  if (year) year.textContent = String(new Date().getFullYear());
+// テンプレートコピー機能
+function copyTemplate() {
+    const template = `【お名前】：
+【ご連絡方法】電話 / メール：
+【場所（町名・番地など）】：
+【困っていること】：
+【希望日時】：
+【補足】：`;
+    
+    navigator.clipboard.writeText(template).then(() => {
+        alert('テンプレートをコピーしました！');
+    }).catch(err => {
+        console.error('コピーに失敗しました', err);
+    });
+}
 
-  
+// スクロールアニメーション
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-// LINE CTA buttons (centralized by window.LINE_CONTACT_URL)
-const lineUrl =
-  (typeof window !== "undefined" && window.LINE_CONTACT_URL) ||
-  "https://line.me/R/ti/p/@vup1475q";
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll');
+        }
+    });
+}, observerOptions);
 
-document.querySelectorAll("a.js-line-cta").forEach((a) => {
-  a.setAttribute("href", lineUrl);
-  a.setAttribute("target", "_blank");
-  a.setAttribute("rel", "noopener");
+document.addEventListener('DOMContentLoaded', () => {
+    // セクションにアニメーションを適用
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // モバイルメニュートグル
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    
+    if (mobileMenuBtn && nav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // ナビゲーションリンクをクリックしたらメニューを閉じる
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    }
 });
-// Mobile nav
-  const toggle = document.querySelector(".nav-toggle");
-  const mobileNav = document.querySelector(".mobile-nav");
-  if (toggle && mobileNav) {
-    const setOpen = (open) => {
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      mobileNav.hidden = !open;
-      toggle.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
-    };
-    setOpen(false);
-
-    toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") !== "true";
-      setOpen(open);
-    });
-
-    mobileNav.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => setOpen(false));
-    });
-  }
-
-  // Copy template
-  const copyBtn = document.getElementById("copyBtn");
-  const template = document.querySelector(".template");
-  const status = document.getElementById("copyStatus");
-
-  if (copyBtn && template) {
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(template.value);
-        if (status) status.textContent = "コピーしました。メールやLINEに貼り付けてお使いください。";
-      } catch (e) {
-        if (status) status.textContent = "コピーできませんでした。手動で選択してコピーしてください。";
-      }
-    });
-  }
-})();

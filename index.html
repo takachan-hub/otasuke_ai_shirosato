@@ -1,452 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>お助けAI城里センター｜訪問型サポート（城里町）</title>
-  <meta name="description" content="茨城県城里町を中心に活動する、町の便利屋さんのような訪問型サポート。パソコン・スマホ、書類や文章づくり、仕事の段取りなどを、顔を見て一緒に解決します。" />
-  <meta name="theme-color" content="#1f6f3e" />
-  <link rel="preconnect" href="https://images.unsplash.com" />
-  <link rel="stylesheet" href="./styles.css" />
-
-  <script>
-    // 問い合わせ用LINE URL（ここだけ変更すればCTAボタンのリンク先が一括で変わります）
-    window.LINE_CONTACT_URL = "https://line.me/R/ti/p/@vup1475q";
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お助けAI城里センター｜訪問型サポート（城里町）</title>
+    <meta name="description" content="城里町のデジタル相談窓口。顔を見て話せる、ちょっと頼れる存在。AI活用を代行し、暮らしにゆとりと喜びを届けます。">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <a class="skip" href="#main">本文へスキップ</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="brand-mark">
-          <img src="./ai-character.png" alt="お助けAI城里センター キャラクター" />
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="./ai-character.png" alt="お助けAI城里センター">
+                <span>お助けAI城里センター</span>
+            </a>
+            <nav>
+                <a href="#about">概要</a>
+                <a href="#features">特徴</a>
+                <a href="#for-you">おすすめ</a>
+                <a href="#pricing">料金</a>
+                <a href="#faq">FAQ</a>
+                <a href="#line">LINE</a>
+                <a href="#contact">問い合わせ</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="メニュー">☰</button>
         </div>
-        <div class="brand-text">
-          <p class="brand-name">お助けAI城里センター</p>
-          <p class="brand-sub">城里町のデジタル相談窓口</p>
-        </div>
-      </div>
+    </header>
 
-      <nav class="nav">
-        <a href="#about">概要</a>
-        <a href="#features">特徴</a>
-        <a href="#for-you">おすすめ</a>
-        <a href="#pricing">料金</a>
-        <a href="#faq">FAQ</a>
-        <a href="#line">LINE</a>
-        <a href="#contact" class="btn btn-small">問い合わせ</a>
-      </nav>
-
-      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile-nav" hidden>
-      <a href="#about">概要</a>
-      <a href="#features">特徴</a>
-      <a href="#for-you">おすすめ</a>
-      <a href="#pricing">料金</a>
-      <a href="#line">LINE</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">問い合わせ</a>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
+    <!-- ヒーローセクション -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="muted small">私たちは、AI活用を代行することで、暮らしにゆとりと喜びを届け、地域と共に歩み続けます。</p>
-          <p class="pill">地域密着・訪問中心</p>
-          <h1>顔を見て話せる、城里町のちょっと頼れる存在</h1>
-          <p class="lead">――相談だけでいい、訪問型サポート――</p>
-
-          <p class="hero-desc">
-            「よくわからないので、誰かに聞きたい」そんな時に、家や職場へ伺って一緒に考えるサービスです。
-            パソコン・スマホ、書類や文章づくり、仕事の整理や段取りなど、話しながら形にしていきます。
-          </p>
-
-          <div class="hero-cta">
-            <a class="btn js-line-cta" href="https://line.me/R/ti/p/@vup1475q">今すぐ問い合わせ</a>
-            <a class="btn btn-ghost" href="#about">サービスを詳しく見る</a>
-          </div>
-
-          <ul class="quick">
-            <li>✅ 専門用語は極力使いません</li>
-            <li>✅ AIは裏側で使用（お客様は触りません）</li>
-            <li>✅ うまく説明できなくても大丈夫</li>
-          </ul>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">私たちは、AI活用を代行することで、暮らしにゆとりと喜びを届け、地域と共に歩み続けます。</p>
+                <h1>顔を見て話せる、<br>城里町の<br>ちょっと頼れる存在</h1>
+                <p class="hero-description">
+                    ――相談だけでいい、訪問型サポート――<br><br>
+                    「よくわからないので、誰かに聞きたい」そんな時に、家や職場へ伺って一緒に考えるサービスです。
+                    パソコン・スマホ、書類や文章づくり、仕事の整理や段取りなど、話しながら形にしていきます。
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://line.me/R/ti/p/@vup1475q" class="btn btn-primary">今すぐ問い合わせ</a>
+                    <a href="#about" class="btn btn-secondary">サービスを詳しく見る</a>
+                </div>
+                <ul class="hero-features">
+                    <li>専門用語は極力使いません</li>
+                    <li>AIは裏側で使用（お客様は触りません）</li>
+                    <li>うまく説明できなくても大丈夫</li>
+                </ul>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-tree.jpg" alt="城里町の風景" loading="lazy">
+            </div>
         </div>
-
-        <figure class="hero-media">
-          <img
-            src="assets/hero-tree.jpg"
-            alt=""
-            loading="lazy"
-          / alt="">
-</figure>
-      </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>事業概要</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>町の便利屋さんのような存在</h3>
-            <p>茨城県城里町を中心に活動する、地域密着型サポートサービスです。家や職場へ伺い、落ち着いて相談できます。</p>
-          </article>
-          <article class="card">
-            <h3>「相談」しながら「依頼」する</h3>
-            <p>文章・書類づくり、仕事の整理・段取り、進め方が分からないことなどを、話しながら一緒に解決します。</p>
-          </article>
-          <article class="card">
-            <h3>知識や準備は不要</h3>
-            <p>「何をどう言えばいいか分からない」でも大丈夫。困りごとを言葉にするところからお手伝いします。</p>
-          </article>
+    <!-- 事業概要 -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">ABOUT</span>
+                <h2 class="section-title">事業概要</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>町の便利屋さんのような存在</h3>
+                    <p>茨城県城里町を中心に活動する、地域密着型サポートサービスです。家や職場へ伺い、落ち着いて相談できます。</p>
+                </div>
+                <div class="about-card">
+                    <h3>「相談」しながら「依頼」する</h3>
+                    <p>文章・書類づくり、仕事の整理・段取り、進め方が分からないことなどを、話しながら一緒に解決します。</p>
+                </div>
+                <div class="about-card">
+                    <h3>知識や準備は不要</h3>
+                    <p>「何をどう言えばいいか分からない」でも大丈夫。困りごとを言葉にするところからお手伝いします。</p>
+                </div>
+            </div>
+            <div class="consultation-list">
+                <h3>よくあるご相談</h3>
+                <ul>
+                    <li>書類・文章を「分かりやすく」まとめたい</li>
+                    <li>案内文・チラシ・お知らせを作りたい</li>
+                    <li>スマホやパソコンの操作でつまずく</li>
+                    <li>仕事の段取りが混乱している</li>
+                    <li>どう進めたらいいか一緒に考えてほしい</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="two-col">
-          <div>
-            <h3 class="mini">よくあるご相談</h3>
-            <ul class="list">
-              <li>書類・文章を「分かりやすく」まとめたい</li>
-              <li>案内文・チラシ・お知らせを作りたい</li>
-              <li>スマホやパソコンの操作でつまずく</li>
-              <li>仕事の段取りが混乱している</li>
-              <li>どう進めたらいいか一緒に考えてほしい</li>
-            </ul>
-          </div>
-          <figure class="media">
-            <img
-              src="assets/for-you.jpg"
-              alt=""
-              loading="lazy"
-            / alt="">
-</figure>
-        </div>
-      </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section section-alt">
-      <div class="container">
-        <h2>特徴</h2>
-
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="icon" aria-hidden="true">🏠</div>
-            <h3>訪問が中心</h3>
-            <p>家・事務所・作業場などへ伺います。出向く必要はありません。顔を見て、落ち着いて話せます。</p>
-          </article>
-
-          <article class="feature">
-            <div class="icon" aria-hidden="true">🙂</div>
-            <h3>むずかしい話はしません</h3>
-            <p>専門用語は極力使いません。ゆっくりで大丈夫。分かる言葉で、一緒に進めます。</p>
-          </article>
-
-          <article class="feature">
-            <div class="icon" aria-hidden="true">🤝</div>
-            <h3>AIは裏側で使います</h3>
-            <p>お客様がAIを使うことはありません。触る必要も覚える必要もなく、こちらが形にします。</p>
-          </article>
+    <!-- 特徴 -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FEATURES</span>
+                <h2 class="section-title">特徴</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🏠</span>
+                    <h3>訪問が中心</h3>
+                    <p>家・事務所・作業場などへ伺います。出向く必要はありません。顔を見て、落ち着いて話せます。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🙂</span>
+                    <h3>むずかしい話はしません</h3>
+                    <p>専門用語は極力使いません。ゆっくりで大丈夫。分かる言葉で、一緒に進めます。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🤝</span>
+                    <h3>AIは裏側で使います</h3>
+                    <p>お客様がAIを使うことはありません。触る必要も覚える必要もなく、こちらが形にします。</p>
+                </div>
+            </div>
+            <div class="vision-box">
+                <h3>目指している存在</h3>
+                <p class="vision-text">
+                    「いなくなるとちょっと困る」<br>
+                    「気軽に相談できる」<br>
+                    「来てくれるのが少し楽しみになる」<br>
+                    城里町で、静かに頼られ続ける存在
+                </p>
+            </div>
         </div>
-
-        <div class="quote">
-          <p class="quote-title">目指している存在</p>
-          <p class="quote-body">
-            「いなくなるとちょっと困る」<br />
-            「気軽に相談できる」<br />
-            「来てくれるのが少し楽しみになる」<br />
-            <span>城里町で、静かに頼られ続ける存在</span>
-          </p>
-        </div>
-      </div>
     </section>
 
-    <!-- FOR YOU -->
-    <section id="for-you" class="section">
-      <div class="container">
-        <h2>こんな方におすすめ</h2>
-        <div class="two-col reverse">
-          <div>
-            <ul class="checklist">
-              <li><span>個人事業主・小さなお店の経営者</span>：文章・案内・整理などを一緒に進めたい</li>
-              <li><span>小規模農家・兼業農家</span>：段取りや記録、連絡文などを手早く整えたい</li>
-              <li><span>パソコンやスマホが苦手</span>：誰かに聞きながら落ち着いて操作したい</li>
-            </ul>
-
+    <!-- おすすめ -->
+    <section id="for-you">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FOR YOU</span>
+                <h2 class="section-title">こんな方におすすめ</h2>
+            </div>
+            <div class="target-cards">
+                <div class="target-card">
+                    <h3>個人事業主・小さなお店の経営者</h3>
+                    <p>文章・案内・整理などを一緒に進めたい</p>
+                </div>
+                <div class="target-card">
+                    <h3>小規模農家・兼業農家</h3>
+                    <p>段取りや記録、連絡文などを手早く整えたい</p>
+                </div>
+                <div class="target-card">
+                    <h3>パソコンやスマホが苦手</h3>
+                    <p>誰かに聞きながら落ち着いて操作したい</p>
+                </div>
+            </div>
             <div class="cta-box">
-              <p class="cta-title">まずは「相談だけ」でOKです</p>
-              <p class="cta-text">「何から話せばいいか分からない」でも大丈夫。状況を聞きながら、できる形をご提案します。</p>
-              <a class="btn js-line-cta" href="https://line.me/R/ti/p/@vup1475q">無料相談してみる</a>
+                <h3>まずは「相談だけ」でOKです</h3>
+                <p>「何から話せばいいか分からない」でも大丈夫。状況を聞きながら、できる形をご提案します。</p>
+                <a href="https://line.me/R/ti/p/@vup1475q" class="btn">無料相談してみる</a>
             </div>
-          </div>
-
-          <figure class="media">
-            <img
-              src="assets/overview.jpg"
-              alt=""
-              loading="lazy"
-            / alt="">
-</figure>
         </div>
-      </div>
     </section>
 
-    
-    <!-- PRICING -->
-    <section id="pricing" class="section section-alt">
-      <div class="container">
-        <h2>料金</h2>
-
-        <div class="card">
-          <p class="price-lead"><span class="price-amount">2,200円（税込）〜</span></p>
-          <p class="muted">内容と作業時間によって変わります。<br>始める前に「いくらになるか」をお伝えしてから進めます。</p>
-
-          <ul class="checklist">
-            <li><span>事前に料金が分かる</span>：作業内容を聞いて、目安を先にご案内します。</li>
-            <li><span>あとから高くならない</span>：追加が必要なときは、必ず相談してから進めます。</li>
-            <li><span>相談だけでもOK</span>：まずは状況を聞いて、できる形をご提案します。</li>
-          </ul>
-
-          <div class="cta-box">
-            <p class="cta-title">まずは気軽に聞いてください</p>
-            <p class="cta-text">「これって頼める？」の段階でも大丈夫です。短い相談から始められます。</p>
-            <a class="btn js-line-cta" href="https://line.me/R/ti/p/@vup1475q">お問い合わせへ</a>
-          </div>
-        </div>
-
-        <div class="card price-table-card">
-          <h3 class="card-title">料金制度（一覧）</h3>
-          <div class="table-scroll" role="region" aria-label="料金表">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>項目</th>
-                  <th>内容</th>
-                  <th>料金（税込）</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="price-item">相談</td>
-                <td>訪問相談（30分）</td>
-                <td class="price-fee">無料</td>
-              </tr>
-              <tr>
-                <td class="price-item">相談＋解決</td>
-                <td>その場で解決できる場合</td>
-                <td class="price-fee">2,200円</td>
-              </tr>
-              <tr>
-                <td class="price-item">チラシ作成サポート</td>
-                <td>A4カラー片面（100枚印刷付き）</td>
-                <td class="price-fee">16,500円</td>
-              </tr>
-              <tr>
-                <td class="price-item">補助金申請サポート（伴走型）</td>
-                <td>申請の整理〜提出まで、いっしょに進めます</td>
-                <td class="price-fee">着手金 11,000円<br><span class='muted small'>成功報酬：成功報酬（下限¥33,000） ／ 採択額の5％</span></td>
-              </tr>
-              <tr>
-                <td class="price-item">個人向けデジタル安心見守り</td>
-                <td>月1回の訪問相談（30分）、LINEでのAI活用相談（無制限）</td>
-                <td class="price-fee">月額 ¥3,300</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <details class="note">
-            <summary>補足（料金表にないご依頼もOK）</summary>
-            <div class="note-body">
-              <p class="muted small">
-                上記の料金表にないご依頼も対応可能です。書類・文章の作成や整理、手続きの段取り、
-                スマホ・パソコンの困りごとなど、内容をお聞きしたうえで「対応できるか」「目安の費用」を事前にご案内します。
-              </p>
+    <!-- 料金 -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">PRICING</span>
+                <h2 class="section-title">料金</h2>
             </div>
-          </details>
+            <div class="pricing-intro">
+                <h3>2,200円（税込）〜</h3>
+                <p>内容と作業時間によって変わります。</p>
+                <p>始める前に「いくらになるか」をお伝えしてから進めます。</p>
+            </div>
+            <div class="pricing-features">
+                <div class="pricing-feature">
+                    <h4>事前に料金が分かる</h4>
+                    <p>作業内容を聞いて、目安を先にご案内します。</p>
+                </div>
+                <div class="pricing-feature">
+                    <h4>あとから高くならない</h4>
+                    <p>追加が必要なときは、必ず相談してから進めます。</p>
+                </div>
+                <div class="pricing-feature">
+                    <h4>相談だけでもOK</h4>
+                    <p>まずは状況を聞いて、できる形をご提案します。</p>
+                </div>
+            </div>
+            <div class="pricing-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>内容</th>
+                            <th>料金（税込）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>相談</td>
+                            <td>訪問相談（30分）</td>
+                            <td class="price-highlight">無料</td>
+                        </tr>
+                        <tr>
+                            <td>相談＋解決</td>
+                            <td>その場で解決できる場合</td>
+                            <td class="price-highlight">2,200円</td>
+                        </tr>
+                        <tr>
+                            <td>チラシ作成サポート</td>
+                            <td>A4カラー片面（100枚印刷付き）</td>
+                            <td class="price-highlight">16,500円</td>
+                        </tr>
+                        <tr>
+                            <td>補助金申請サポート（伴走型）</td>
+                            <td>申請の整理〜提出まで、いっしょに進めます</td>
+                            <td class="price-highlight">着手金 11,000円<br>成功報酬：採択額の5％（下限33,000円）</td>
+                        </tr>
+                        <tr>
+                            <td>個人向けデジタル安心見守り</td>
+                            <td>月1回の訪問相談（30分）、LINEでのAI活用相談（無制限）</td>
+                            <td class="price-highlight">月額 3,300円</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pricing-note">
+                <h4>補足（料金表にないご依頼もOK）</h4>
+                <p>
+                    上記の料金表にないご依頼も対応可能です。書類・文章の作成や整理、手続きの段取り、
+                    スマホ・パソコンの困りごとなど、内容をお聞きしたうえで「対応できるか」「目安の費用」を事前にご案内します。
+                </p>
+            </div>
         </div>
-      </div>
     </section>
-
-
 
     <!-- FAQ -->
-    <section id="faq" class="section section-alt">
-      <div class="container">
-        <h2>よくあるご不安（FAQ）</h2>
-        <p class="muted">はじめての方が気になりやすい点を、先にまとめました。</p>
-
-        <div class="faq">
-          <details>
-            <summary>Q1. 「AIって、なんだか難しそうで心配です」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> そう感じる方はとても多いです。専門的なことは一切知らなくて大丈夫です。分からないところを、分からないまま一緒に確認していきます。</p>
+    <section id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">よくあるご不安</h2>
+                <p class="section-description">はじめての方が気になりやすい点を、先にまとめました。</p>
             </div>
-          </details>
-
-          <details>
-            <summary>Q2. 「高齢でも大丈夫でしょうか？」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> はい、大丈夫です。むしろ「ゆっくり説明してほしい」という方を想定しています。紙に書いたり、実際の画面を一緒に見ながら進めます。</p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">「AIって、なんだか難しそうで心配です」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> そう感じる方はとても多いです。専門的なことは一切知らなくて大丈夫です。分からないところを、分からないまま一緒に確認していきます。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「高齢でも大丈夫でしょうか？」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> はい、大丈夫です。むしろ「ゆっくり説明してほしい」という方を想定しています。紙に書いたり、実際の画面を一緒に見ながら進めます。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「インターネットで調べれば済む話では？」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> 調べられる方は、それで十分だと思います。ただ、「何をどう調べたらいいか分からない」という場合は、少しお手伝いできるかもしれません。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「個人情報を入力するのが不安です」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> とても大切な感覚です。入れてはいけない情報、気をつける点は最初にきちんとお話しします。無理にAIを使うことはありません。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「何をしてくれるサービスなのか、よく分かりません」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> 最初は、そこが一番分かりにくいと思います。「今、何に困っているか」を一緒に整理するところから始めます。はっきりしていなくても大丈夫です。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「AIって、間違うこともありますよね？」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> はい、あります。ですので、AIの答えをそのまま使うことはしません。一緒に確認しながら、使える部分だけを選びます。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「若い人向けのサービスではありませんか？」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> いいえ、年齢は関係ありません。スマホやデジタルに不安がある方ほど、ゆっくり使っていただけます。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「料金が心配です」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> その点も大切ですよね。作業に入る前に、内容と費用をきちんとお伝えします。相談だけで終わっても問題ありません。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「町で、こういうサービスは必要なんでしょうか？」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> 表に出にくいだけで、実は困っている方は多いです。小さな「分からない」を、気軽に話せる場所を目指しています。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">「うまくいかなかったらどうなりますか？」</div>
+                    <div class="faq-answer">
+                        <strong>A.</strong> 最初から完璧を目指しません。うまくいかない場合は、理由を一緒に整理して、次を考えます。無理に進めることはありません。
+                    </div>
+                </div>
             </div>
-          </details>
-
-          <details>
-            <summary>Q3. 「インターネットで調べれば済む話では？」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> 調べられる方は、それで十分だと思います。ただ、「何をどう調べたらいいか分からない」という場合は、少しお手伝いできるかもしれません。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q4. 「個人情報を入力するのが不安です」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> とても大切な感覚です。入れてはいけない情報、気をつける点は最初にきちんとお話しします。無理にAIを使うことはありません。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q5. 「何をしてくれるサービスなのか、よく分かりません」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> 最初は、そこが一番分かりにくいと思います。「今、何に困っているか」を一緒に整理するところから始めます。はっきりしていなくても大丈夫です。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q6. 「AIって、間違うこともありますよね？」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> はい、あります。ですので、AIの答えをそのまま使うことはしません。一緒に確認しながら、使える部分だけを選びます。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q7. 「若い人向けのサービスではありませんか？」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> いいえ、年齢は関係ありません。スマホやデジタルに不安がある方ほど、ゆっくり使っていただけます。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q8. 「料金が心配です」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> その点も大切ですよね。作業に入る前に、内容と費用をきちんとお伝えします。相談だけで終わっても問題ありません。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q9. 「町で、こういうサービスは必要なんでしょうか？」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> 表に出にくいだけで、実は困っている方は多いです。小さな「分からない」を、気軽に話せる場所を目指しています。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q10. 「うまくいかなかったらどうなりますか？」</summary>
-            <div class="faq-a">
-              <p><strong>A.</strong> 最初から完璧を目指しません。うまくいかない場合は、理由を一緒に整理して、次を考えます。無理に進めることはありません。</p>
-            </div>
-          </details>
         </div>
-      </div>
     </section>
-
 
     <!-- LINE -->
-    <section id="line" class="section">
-      <div class="container">
-        <h2>LINEで問い合わせ</h2>
-
-        <div class="card line-card">
-          <p class="muted">友だち追加して、そのままメッセージでお問い合わせできます。</p>
-
-          <a class="line-cta" href="https://line.me/R/ti/p/@vup1475q" target="_blank" rel="noopener">
-            <img src="assets/line-qr.png" alt="LINE 友だち追加 QRコード" class="line-qr" />
-            <span class="btn btn-small">友だち追加して問い合わせ</span>
-          </a>
-
-          
-        </div>
-      </div>
-    </section>
-
-    
-    <!-- REVIEWS -->
-    <section id="reviews" class="section section-alt">
-      <div class="container">
-        <div class="card" style="text-align:center;">
-          <p class="muted">第三者の評価もご確認いただけます</p>
-          <p class="small">Googleに寄せられた口コミを、そのままご覧いただけます。</p>
-          <a class="btn btn-ghost"
-             href="https://search.google.com/local/reviews?placeid=ChIJ71R9rOajTG0Rhs6YxNz47-g"
-             target="_blank" rel="noopener">
-            Googleの口コミを見る
-          </a>
-        </div>
-      </div>
-    </section>
-
-<!-- CONTACT -->
-    <section id="contact" class="section section-contact">
-      <div class="container">
-        <h2>お問い合わせ</h2>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>連絡先</h3>
-            <p class="muted">LINEでのお問い合わせがおすすめです。</p>
-
-            <div class="contact-items">
-              <a class="contact-item" href="tel:08054775504">
-                <span class="label">電話</span>
-                <span class="value">080-5477-5504</span>
-              </a>
-              <a class="contact-item" href="mailto:otasuke.ai.shirosato@gmail.com?subject=%E3%81%8A%E5%8A%A9%E3%81%91AI%E5%9F%8E%E9%87%8C%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E7%9B%B8%E8%AB%87">
-                <span class="label">メール</span>
-                <span class="value">otasuke.ai.shirosato@gmail.com</span>
-              </a>
-              <div class="contact-item no-link">
-                <span class="label">代表</span>
-                <span class="value">高柳 亮（たかやなぎ　あきら）</span>
-              </div>
+    <section id="line">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">LINE</span>
+                <h2 class="section-title">LINEで問い合わせ</h2>
+                <p class="section-description">友だち追加して、そのままメッセージでお問い合わせできます。</p>
             </div>
+            <div class="line-content">
+                <a href="https://line.me/R/ti/p/@vup1475q" class="line-qr">
+                    <img src="assets/line-qr.png" alt="LINE友だち追加QRコード" loading="lazy">
+                </a>
+                <div class="review-box">
+                    <h3>第三者の評価もご確認いただけます</h3>
+                    <p>Googleに寄せられた口コミを、そのままご覧いただけます。</p>
+                    <a href="https://search.google.com/local/reviews?placeid=ChIJ71R9rOajTG0Rhs6YxNz47-g" target="_blank">Googleの口コミを見る →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <p class="note">※訪問日時・場所・内容を簡単にお伝えいただけるとスムーズです。</p>
-          </div>
-
-          <div class="contact-card">
-            <h3>送信テンプレ（コピペ用）</h3>
-            <p class="muted">メールやLINEに貼り付けてお使いください。</p>
-            <textarea class="template" readonly rows="10">【お名前】：
+    <!-- お問い合わせ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">CONTACT</span>
+                <h2 class="section-title">お問い合わせ</h2>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <h3>電話</h3>
+                    <a href="tel:08054775504">080-5477-5504</a>
+                </div>
+                <div class="contact-card">
+                    <h3>メール</h3>
+                    <a href="mailto:otasuke.ai.shirosato@gmail.com">otasuke.ai.shirosato@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>代表</h3>
+                <p>高柳 亮（たかやなぎ　あきら）</p>
+                <p style="margin-top: 1rem;">※訪問日時・場所・内容を簡単にお伝えいただけるとスムーズです。</p>
+            </div>
+            <div class="template-box">
+                <h3>送信テンプレ（コピペ用）</h3>
+                <p>メールやLINEに貼り付けてお使いください。</p>
+                <pre>【お名前】：
 【ご連絡方法】電話 / メール：
 【場所（町名・番地など）】：
 【困っていること】：
 【希望日時】：
-【補足】：</textarea>
-            <button class="btn btn-ghost" id="copyBtn">テンプレをコピー</button>
-            <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
-          </div>
+【補足】：</pre>
+                <button class="copy-btn" onclick="copyTemplate()">テンプレをコピー</button>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> お助けAI城里センター</p>
-      <p class="small">AI活用を代行します。インボイス制度登録事業者。</p>
-    </div>
-  </footer>
+    <!-- フッター -->
+    <footer>
+        <p>© お助けAI城里センター</p>
+        <p>AI活用を代行します。インボイス制度登録事業者。</p>
+    </footer>
 
-  <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
