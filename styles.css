@@ -797,9 +797,29 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.representative-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.representative-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.representative-text {
+    flex: 1;
+}
+
 .contact-info h3 {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-info p {
@@ -909,6 +929,17 @@ footer p {
     .pricing-features,
     .contact-methods {
         grid-template-columns: 1fr;
+    }
+
+    .representative-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .representative-photo {
+        width: 100px;
+        height: 100px;
     }
 
     .section-title {
