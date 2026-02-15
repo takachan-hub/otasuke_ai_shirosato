@@ -739,6 +739,120 @@ section {
 }
 
 /* ==========================================
+   SNSセクション
+========================================== */
+#sns {
+    background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-cream) 100%);
+}
+
+.sns-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sns-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    background: var(--bg-white);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--bg-white);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.sns-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.sns-button:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.sns-button:hover::before {
+    opacity: 0.9;
+}
+
+.sns-icon {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+.sns-button span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Facebook */
+.sns-button.facebook::before {
+    background: linear-gradient(135deg, #1877F2 0%, #0C63D4 100%);
+}
+
+/* Instagram */
+.sns-button.instagram::before {
+    background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%);
+}
+
+/* Twitter/X */
+.sns-button.twitter::before {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+}
+
+/* Threads */
+.sns-button.threads::before {
+    background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .sns-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .sns-button {
+        padding: 1.5rem 1rem;
+    }
+    
+    .sns-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .sns-button span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sns-buttons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* ==========================================
    お問い合わせセクション
 ========================================== */
 #contact {
