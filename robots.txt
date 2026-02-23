@@ -1,14 +1,4 @@
-# robots.txt for otasuke-ai-shirosato.com
-
 User-agent: *
 Allow: /
 
-# サイトマップの場所
 Sitemap: https://otasuke-ai-shirosato.com/sitemap.xml
-
-# クロール頻度の設定（任意）
-Crawl-delay: 1
-
-# 特定のディレクトリを除外する場合（必要に応じて追加）
-# Disallow: /admin/
-# Disallow: /private/
