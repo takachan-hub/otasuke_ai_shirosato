@@ -510,6 +510,36 @@ a {
   margin-bottom: 16px;
 }
 
+.pricing-sale-banner {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 2px solid rgba(219, 109, 66, 0.35);
+  background:
+    linear-gradient(135deg, rgba(244, 155, 98, 0.18), rgba(239, 212, 132, 0.2)),
+    rgba(255, 253, 248, 0.96);
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing-sale-banner strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #9a3f1d;
+  font-size: 1rem;
+}
+
+.pricing-sale-banner strong::before {
+  content: "★";
+  color: var(--orange-600);
+}
+
+.pricing-sale-banner p {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .pricing-highlight > div {
   background: rgba(255, 253, 248, 0.92);
   border: 1px solid rgba(216, 221, 207, 0.9);
@@ -522,6 +552,49 @@ a {
   display: block;
   font-size: 1.08rem;
   color: var(--green-900);
+}
+
+.discount-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+}
+
+.discount-cell {
+  font-weight: 700;
+}
+
+.old-price {
+  color: var(--ink-soft);
+  text-decoration-line: line-through;
+  text-decoration-style: double;
+  text-decoration-color: rgba(219, 109, 66, 0.95);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.12em;
+}
+
+.new-price {
+  color: #b33d19;
+  font-weight: 800;
+  font-size: 1.05em;
+  background: rgba(239, 212, 132, 0.35);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.sale-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #db6d42, #c7532a);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .pricing-highlight p {
