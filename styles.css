@@ -1068,6 +1068,15 @@ tbody tr:last-child td { border-bottom: none; }
   background: linear-gradient(135deg, #2a2a2a, #111);
   border-color: rgba(255,255,255,0.12);
 }
+.social-grid a.sns-btn.youtube {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  border-color: rgba(255,0,0,0.40);
+  box-shadow: 0 0 14px rgba(255,0,0,0.18);
+}
+.social-grid a.sns-btn.tiktok {
+  background: linear-gradient(135deg, #25f4ee, #000, #fe2c55);
+  border-color: rgba(255,255,255,0.14);
+}
 .social-grid a.icon-only { padding-inline: 10px; }
 .social-grid a.icon-only .sns-icon { width: 20px; height: 20px; flex-basis: 20px; }
 .social-grid a:hover, .social-grid a:focus-visible {
