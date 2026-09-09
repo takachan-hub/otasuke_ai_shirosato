@@ -800,6 +800,12 @@ a   { color: inherit; }
   letter-spacing: 0.03em;
   white-space: nowrap;
 }
+.pricing-highlight .sale-badge {
+  margin-bottom: 8px;
+}
+.pricing-highlight .old-price {
+  font-weight: 700;
+}
 .pricing-highlight p {
   margin: 6px 0 0;
   color: var(--text-secondary);
