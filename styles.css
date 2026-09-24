@@ -817,6 +817,190 @@ a   { color: inherit; }
   font-size: 0.90rem;
 }
 
+/* ---- Plan cards ---- */
+.plan-card {
+  background: rgba(255,255,255,0.030);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+}
+.plan-label {
+  margin: 0 0 6px;
+  color: var(--cyan);
+  font-size: 0.80rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.plan-main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 18px 28px;
+  border-color: var(--border-strong);
+  background: linear-gradient(135deg, rgba(0,102,255,0.08), rgba(123,47,255,0.06));
+  box-shadow: var(--shadow-card-hover);
+}
+.plan-main h3 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  color: var(--text-primary);
+}
+.plan-main-head p:last-child {
+  margin: 10px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.plan-main-price {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,209,102,0.24);
+  background: linear-gradient(135deg, rgba(255,209,102,0.07), rgba(255,160,60,0.04));
+}
+.plan-main-price p { margin: 8px 0 0; }
+.price-regular { color: var(--text-muted); font-weight: 700; }
+.price-now {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+.price-now small { color: var(--gold); font-weight: 800; }
+.price-now strong {
+  color: var(--cyan);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.2;
+}
+.price-term { color: var(--text-secondary); font-size: 0.92rem; font-weight: 700; }
+.plan-points,
+.included-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.plan-points { grid-column: 1 / -1; }
+.plan-points li,
+.included-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+}
+.plan-points li::before,
+.included-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 2px;
+  color: var(--cyan);
+  font-weight: 800;
+}
+.plan-fineprint {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.pricing-subhead { margin: 40px 0 16px; }
+.pricing-subhead h3,
+.build-head h3,
+.included-block h3,
+.after-contract h3 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  color: var(--text-primary);
+}
+.build-head { margin: 36px 0 16px; }
+
+.plan-tier + .plan-tier {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+}
+.plan-tier h4 { margin: 0; font-size: 1.02rem; color: var(--text-primary); }
+.plan-tier > p {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.90rem;
+}
+
+.price-list { margin: 12px 0 0; display: grid; gap: 6px; }
+.price-list > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(0,212,255,0.05);
+}
+.price-list dt { color: var(--text-secondary); font-size: 0.88rem; }
+.price-list dd { margin: 0; color: var(--text-primary); font-weight: 800; }
+
+.included-block,
+.after-contract {
+  margin-top: 16px;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-medium);
+  background: rgba(0,212,255,0.035);
+}
+.included-list {
+  margin-top: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 20px;
+}
+.after-contract { margin-top: 24px; }
+.after-contract > p { margin: 8px 0 0; color: var(--text-secondary); font-size: 0.93rem; }
+.after-contract .price-list { max-width: 420px; }
+
+.phase-strip {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.phase-strip li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-medium);
+  background: rgba(0,212,255,0.06);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.phase-strip li + li::before {
+  content: "→";
+  margin-left: -4px;
+  color: var(--cyan);
+}
+
+.pricing-cta {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,102,255,0.06));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 28px;
+  flex-wrap: wrap;
+}
+.pricing-cta strong { font-size: 1.15rem; color: var(--text-primary); }
+.pricing-cta p { margin: 6px 0 0; color: var(--text-secondary); font-size: 0.93rem; }
+.pricing-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
 /* ============================================
    TABLE
    ============================================ */
@@ -1203,7 +1387,9 @@ tbody tr:last-child td { border-bottom: none; }
   .three-col,
   .two-col,
   .pricing-highlight,
+  .plan-main,
   .contact-grid { grid-template-columns: 1fr; }
+  .included-list { grid-template-columns: 1fr 1fr; }
 
   .hero { padding-top: 44px; }
   .hero-visual { order: -1; }
@@ -1225,6 +1411,15 @@ tbody tr:last-child td { border-bottom: none; }
   .flow-list span { width: 80px; min-height: 46px; font-size: 1rem; }
 
   table { min-width: 680px; }
+
+  .plan-card,
+  .included-block,
+  .after-contract,
+  .pricing-cta { padding: 18px 16px; }
+  .included-list { grid-template-columns: 1fr; }
+  .phase-strip li { font-size: 0.86rem; padding: 6px 12px; }
+  .pricing-cta-actions,
+  .pricing-cta-actions .btn { width: 100%; }
   .social-grid { grid-template-columns: 1fr; }
 
   .profile-card { grid-template-columns: 1fr; text-align: center; }
