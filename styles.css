@@ -957,6 +957,7 @@ a   { color: inherit; }
 .after-contract { margin-top: 24px; }
 .after-contract > p { margin: 8px 0 0; color: var(--text-secondary); font-size: 0.93rem; }
 .after-contract .price-list { max-width: 420px; }
+.after-contract .plan-points { margin-top: 12px; }
 
 .phase-strip {
   margin: 0 0 20px;
