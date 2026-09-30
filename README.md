@@ -1,7 +1,7 @@
 # お助けAI城里センター Webページ（2026-02-26更新版）
 
-このフォルダは、`https://otasuke-ai-shirosato.com/` 向けの静的サイト一式です。
-GitHub Pages または通常の静的ホスティングにそのまま上書きアップロードできます。
+このフォルダは、`https://www.otasuke-ai-shirosato.com/` 向けの静的サイト一式です。
+Cloudflare Pages（プロジェクト `otasuke-ai-shirosato`）で公開しています。main へ push すると自動で公開されます。正式URLは www ありです。
 
 ## 更新内容（2026年2月26日）
 

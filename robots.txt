@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://otasuke-ai-shirosato.com/sitemap.xml
+Sitemap: https://www.otasuke-ai-shirosato.com/sitemap.xml
