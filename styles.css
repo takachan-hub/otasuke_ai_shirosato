@@ -682,6 +682,47 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 }
 
 /* ============================================
+   WORKS
+   ============================================ */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+}
+.work-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.work-shot {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.work-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 24px;
+}
+.card .work-type {
+  margin: 0 0 6px;
+  color: var(--cyan);
+  font-size: 0.80rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.work-link {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 12px 22px;
+}
+.work-body > p:last-of-type { margin-bottom: 18px; }
+
+/* ============================================
    FLOW
    ============================================ */
 .flow-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
@@ -1422,6 +1463,11 @@ tbody tr:last-child td { border-bottom: none; }
   outline-offset: 3px;
 }
 
+/* Keep the header subtitle unclipped just above the menu breakpoint */
+@media (min-width: 1025px) and (max-width: 1100px) {
+  .site-nav a { padding-inline: 9px; }
+}
+
 /* ============================================
    RESPONSIVE — TABLET
    ============================================ */
@@ -1485,6 +1531,8 @@ tbody tr:last-child td { border-bottom: none; }
   .phase-strip li { font-size: 0.86rem; padding: 6px 12px; }
   .pricing-cta-actions,
   .pricing-cta-actions .btn { width: 100%; }
+  .work-body { padding: 18px 16px 20px; }
+  .work-link { align-self: stretch; }
   .social-grid { grid-template-columns: repeat(2,1fr); }
 
   .contact-panel { padding: 22px 18px; }
