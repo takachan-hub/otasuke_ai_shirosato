@@ -187,12 +187,12 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 .site-nav a {
   text-decoration: none;
   color: var(--text-secondary);
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.88rem;
@@ -206,6 +206,12 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   color: var(--cyan);
   border-color: var(--border-subtle);
   outline: none;
+}
+
+.site-nav a.nav-primary {
+  color: var(--cyan);
+  border-color: var(--border-medium);
+  background: var(--cyan-subtle);
 }
 
 .menu-toggle {
@@ -254,8 +260,9 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 44px;
-  align-items: center;
+  align-items: start;
 }
+.hero-copy { padding-top: 24px; }
 .hero-copy, .hero-visual { min-width: 0; }
 
 /* Eyebrow tag */
@@ -291,7 +298,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 /* Hero heading */
 .hero h1 {
   margin: 0;
-  font-size: clamp(1.75rem, 3.4vw, 2.7rem);
+  font-size: clamp(2rem, 4.2vw, 3.1rem);
   line-height: 1.28;
   letter-spacing: 0.02em;
   color: var(--text-primary);
@@ -304,6 +311,66 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   line-height: 1.85;
 }
 .hero-lead strong { color: var(--text-primary); }
+
+.hero-target {
+  margin: 12px 0 0;
+  color: var(--text-primary);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Hero price: the homepage offer at a glance */
+.hero-price {
+  margin-top: 22px;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(135deg, rgba(0,212,255,0.09), rgba(0,102,255,0.06));
+  box-shadow: 0 0 34px rgba(0,212,255,0.10);
+  display: grid;
+  gap: 6px;
+  max-width: 520px;
+}
+.hero-price-row {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 14px;
+}
+.hero-price-label {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.hero-price-value { white-space: nowrap; }
+.hero-price-value strong {
+  color: var(--cyan);
+  font-size: clamp(1.9rem, 3.6vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+.hero-price-value small {
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.hero-price-row.is-monthly {
+  padding-top: 8px;
+  border-top: 1px dashed var(--border-medium);
+}
+.hero-price-row.is-monthly .hero-price-label { color: var(--text-secondary); }
+.hero-price-row.is-monthly strong { font-size: clamp(1.45rem, 2.6vw, 1.75rem); }
+
+.hero-note {
+  margin: 14px 0 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+.hero-note a { color: var(--cyan); }
 
 .hero-actions {
   display: flex;
@@ -561,7 +628,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--cyan), transparent);
 }
-.intro-grid h2 {
+.intro-grid h4 {
   margin: 0;
   font-size: clamp(1.15rem, 2.4vw, 1.85rem);
   line-height: 1.38;
@@ -723,6 +790,90 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   padding: 12px 22px;
 }
 .work-body > p:last-of-type { margin-bottom: 18px; }
+
+/* Single work: show it wide (reverts to the grid once more works are added) */
+@media (min-width: 900px) {
+  .work-card:only-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+  .work-card:only-child .work-shot {
+    width: 58%;
+    flex: 0 0 58%;
+    border-bottom: none;
+    border-right: 1px solid var(--border-subtle);
+  }
+  .work-card:only-child .work-body { justify-content: center; padding: 32px; }
+  .work-card:only-child h3 { font-size: 1.4rem; }
+}
+
+/* ============================================
+   HOMEPAGE FEATURES
+   ============================================ */
+.hp-features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.hp-feature {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+  background: rgba(255,255,255,0.030);
+  box-shadow: var(--shadow-card);
+}
+.hp-feature:first-child {
+  border-color: var(--border-strong);
+  background: linear-gradient(135deg, rgba(0,212,255,0.09), rgba(0,102,255,0.06));
+}
+.hp-icon-wrap {
+  display: grid;
+  place-items: center;
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  color: var(--cyan);
+  background: var(--cyan-subtle);
+  border: 1px solid var(--border-medium);
+  box-shadow: 0 0 16px rgba(0,212,255,0.12);
+}
+.hp-icon { width: 24px; height: 24px; }
+.hp-feature h3 {
+  margin: 2px 0 0;
+  font-size: 1.04rem;
+  line-height: 1.45;
+  color: var(--text-primary);
+}
+.hp-feature p {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.90rem;
+  line-height: 1.72;
+}
+
+/* ============================================
+   OTHER SERVICES
+   ============================================ */
+.service-block + .service-block {
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border-subtle);
+}
+.service-head { margin-bottom: 18px; }
+.service-head h3 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+  color: var(--text-primary);
+  padding-left: 14px;
+  border-left: 3px solid var(--cyan);
+}
+.service-block .intro-grid { margin-bottom: 20px; }
 
 /* ============================================
    FLOW
@@ -932,6 +1083,9 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   line-height: 1.2;
 }
 .price-term { color: var(--text-secondary); font-size: 0.92rem; font-weight: 700; }
+.plan-hp .price-now { justify-content: space-between; }
+.plan-hp .price-now small { color: var(--text-primary); font-size: 0.95rem; font-weight: 700; }
+.plan-hp .price-now + .price-now { padding-top: 8px; border-top: 1px dashed var(--border-medium); }
 .plan-points,
 .included-list {
   margin: 0;
@@ -1465,15 +1619,11 @@ tbody tr:last-child td { border-bottom: none; }
   outline-offset: 3px;
 }
 
-/* Keep the header subtitle unclipped just above the menu breakpoint */
-@media (min-width: 1025px) and (max-width: 1100px) {
-  .site-nav a { padding-inline: 9px; }
-}
-
 /* ============================================
-   RESPONSIVE — TABLET
+   RESPONSIVE — HEADER MENU
+   (collapses earlier than the layout so the 8 menu items never squeeze the brand)
    ============================================ */
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .header-inner { grid-template-columns: 1fr auto; }
   .menu-toggle  { display: inline-block; }
 
@@ -1494,7 +1644,12 @@ tbody tr:last-child td { border-bottom: none; }
   }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: 12px 14px; border-radius: 10px; }
+}
 
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+@media (max-width: 1024px) {
   .hero-grid,
   .intro-grid,
   .three-col,
@@ -1504,8 +1659,10 @@ tbody tr:last-child td { border-bottom: none; }
   .contact-grid { grid-template-columns: 1fr; }
   .included-list { grid-template-columns: 1fr 1fr; }
 
+  .hp-features { grid-template-columns: 1fr 1fr; }
+
   .hero { padding-top: 44px; }
-  .hero-visual { order: -1; }
+  .hero-copy { padding-top: 0; }
   .issue-list { grid-template-columns: 1fr; }
 }
 
@@ -1557,6 +1714,12 @@ tbody tr:last-child td { border-bottom: none; }
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .hp-features { grid-template-columns: 1fr; gap: 10px; }
+  .hp-feature { padding: 16px; grid-template-columns: 42px 1fr; gap: 12px; }
+  .hp-icon-wrap { width: 42px; height: 42px; border-radius: 12px; }
+  .hero-price { padding: 14px 16px; }
+  .hero-actions .btn { flex: 1 1 140px; }
 
   .hero-character-wrap { padding: 20px; }
   .hero-mascot { width: min(200px, 80%); }
