@@ -1183,6 +1183,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .after-contract > p { margin: 8px 0 0; color: var(--text-secondary); font-size: 0.93rem; }
 .after-contract .price-list { max-width: 420px; }
 .after-contract .plan-points { margin-top: 12px; }
+.after-contract .phase-strip { margin: 14px 0 0; }
 
 .phase-strip {
   margin: 0 0 20px;
