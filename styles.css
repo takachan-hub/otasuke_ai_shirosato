@@ -777,6 +777,12 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   flex-direction: column;
   padding: 20px 24px 24px;
 }
+/* Work title: the client's name, shown larger and without the "//" decoration */
+.work-card h3 {
+  font-size: 1.36rem;
+  line-height: 1.35;
+}
+.work-card h3::before { content: none; }
 .card .work-type {
   margin: 0 0 6px;
   color: var(--cyan);
@@ -804,7 +810,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
     border-right: 1px solid var(--border-subtle);
   }
   .work-card:only-child .work-body { justify-content: center; padding: 32px; }
-  .work-card:only-child h3 { font-size: 1.4rem; }
+  .work-card:only-child h3 { font-size: 1.72rem; }
 }
 
 /* ============================================
