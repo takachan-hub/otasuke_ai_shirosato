@@ -1156,6 +1156,8 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   background: rgba(0,212,255,0.05);
 }
 .pay-after p { margin: 0; color: var(--text-secondary); font-size: 0.93rem; }
+.pay-after p strong { color: var(--text-primary); }
+.pay-after .pay-after-note { margin-top: 8px; color: var(--text-muted); font-size: 0.86rem; }
 .pay-after .pay-after-title {
   margin-bottom: 6px;
   color: var(--text-primary);
