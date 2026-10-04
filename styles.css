@@ -364,6 +364,41 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 }
 .hero-price-row.is-monthly .hero-price-label { color: var(--text-secondary); }
 .hero-price-row.is-monthly strong { font-size: clamp(1.45rem, 2.6vw, 1.75rem); }
+.hero-price .pay-badges { margin: 0 0 6px; }
+.hero-price-row:not(.is-monthly) .hero-price-value strong {
+  color: var(--gold);
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 22px rgba(255,209,102,0.28);
+}
+
+/* Payment reassurance badges (HP制作: 前払い不要) */
+.pay-badges {
+  margin: 4px 0 2px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pay-badges li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--cyan-subtle);
+  color: var(--text-primary);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.pay-badges li::before {
+  content: "✓";
+  color: var(--cyan);
+  font-weight: 900;
+}
 
 .hero-note {
   margin: 14px 0 0;
@@ -1103,7 +1138,55 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 }
 .plan-includes strong { display: block; color: var(--cyan); font-size: 0.86rem; margin-bottom: 2px; }
 .plan-fineprint a { color: var(--cyan); }
-.plan-hp .price-now + .price-now { padding-top: 8px; border-top: 1px dashed var(--border-medium); }
+.plan-hp .pay-badges + .price-now { margin-top: 14px; padding-top: 10px; border-top: 1px dashed var(--border-medium); }
+.plan-hp .price-build strong {
+  color: var(--gold);
+  font-size: clamp(2.5rem, 6vw, 3.2rem);
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 22px rgba(255,209,102,0.28);
+}
+.plan-hp .pay-badges { margin-top: 10px; }
+
+/* 完成を確認してからのお支払い */
+.pay-after {
+  grid-column: 1 / -1;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border-medium);
+  background: rgba(0,212,255,0.05);
+}
+.pay-after p { margin: 0; color: var(--text-secondary); font-size: 0.93rem; }
+.pay-after .pay-after-title {
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+.pay-steps {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 6px;
+}
+.pay-steps li {
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.pay-steps li + li::before {
+  content: "→";
+  margin-right: 10px;
+  margin-left: -4px;
+  color: var(--cyan);
+}
+.pay-steps li:last-child { border-color: var(--border-strong); color: var(--cyan); }
 .plan-points,
 .included-list {
   margin: 0;
@@ -1738,6 +1821,9 @@ tbody tr:last-child td { border-bottom: none; }
   .hp-feature { padding: 16px; grid-template-columns: 42px 1fr; gap: 12px; }
   .hp-icon-wrap { width: 42px; height: 42px; border-radius: 12px; }
   .hero-price { padding: 14px 16px; }
+  .pay-after { padding: 14px; }
+  .pay-steps { flex-direction: column; align-items: stretch; gap: 4px; }
+  .pay-steps li + li::before { content: "↓"; margin: 0 8px 0 0; }
   .hero-actions .btn { flex: 1 1 140px; }
 
   .hero-character-wrap { padding: 20px; }
