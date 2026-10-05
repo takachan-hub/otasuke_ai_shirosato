@@ -298,7 +298,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 }
 .sol-main-body strong { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
 .sol-main-body strong::after { content: "\00a0→"; }
-.sol-main-body span { font-size: 0.98rem; opacity: 0.95; }
+.sol-main-body > span { font-size: 0.98rem; opacity: 0.95; }
 
 .sol-subs { list-style: none; margin: 0; padding: 0; display: grid; }
 .sol-subs li + li { border-top: 1px solid var(--line-strong); }
@@ -460,7 +460,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 
 .flow-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .flow-list li { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
-.flow-list span { align-self: start; padding: 2px 0; text-align: center; border-radius: 999px; background: var(--green); color: #fff; font-weight: 700; font-size: 0.85rem; }
+.flow-list li > span { align-self: start; padding: 2px 0; text-align: center; border-radius: 999px; background: var(--green); color: #fff; font-weight: 700; font-size: 0.85rem; }
 .flow-list h3 { margin: 0 0 4px; font-size: 1rem; color: var(--green-dark); }
 .flow-list p { margin: 0; font-size: 0.92rem; color: var(--text-sub); }
 .hp-flow { padding: 18px 20px; background: var(--card); border: 2px solid var(--green); border-radius: 14px; }
@@ -577,6 +577,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .contact-alt a:hover { color: var(--green-dark); }
 .contact-alt a:hover .contact-value { border-color: var(--green); }
 .contact-label { color: var(--text-sub); font-weight: 400; }
+.contact-label, .contact-value { white-space: nowrap; }
 .template-details { margin: 24px 0 0; text-align: left; background: var(--bg) !important; }
 .template-details .more-body { padding-top: 14px; }
 .contact-hint { margin: 0; font-size: 0.88rem; color: var(--text-sub); }
@@ -771,7 +772,18 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   .contact-card h2 { font-size: 1.6rem; }
   .contact-lead { font-size: 1rem; }
   .contact-card .btn-xl { width: 100%; padding-inline: 16px; }
-  .contact-alt { flex-direction: column; align-items: center; gap: 10px; }
+  /* スマホでは意味のまとまり（カタカナ語・金額・期間など）を行の途中で割らない */
+  .nw { white-space: nowrap; }
+  /* スマホだけ、見出しや短い文を意味の区切りで折り返す（PC では通常の文字として扱う） */
+  .nb-sp { display: inline-block; }
+  /* WebKit は .nw が続く文の最小幅を広く見積もるため、1列の grid は最小幅 0 にして画面幅で折り返させる */
+  .more-group, .more-body, .plan-main.plan-hp, .plan-points, .price-list, .flow-list, .faq-list, .intro-grid, .work-points, .sol-subs, .template-body { grid-template-columns: minmax(0, 1fr); }
+
+  .contact-alt { flex-direction: column; align-items: center; gap: 12px; }
+  /* スマホはラベルを上・値を下に置き、電話番号とメールアドレスを1行で読めるようにする */
+  .contact-alt a { flex-direction: column; gap: 2px; padding: 4px; line-height: 1.5; }
+  .contact-alt .contact-label { font-size: 0.8rem; }
+  .contact-alt a[href^="mailto:"] .contact-value { font-size: min(1em, 4.3vw); }
   .contact-meta { margin-top: 28px; }
   .line-box { grid-template-columns: auto 1fr; }
   .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -910,7 +922,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   /* スマホ：コピーを先に（緑の帯）、その下にUI図を重ねずに全部見せる */
   .sol-main { display: flex; flex-direction: column; background: var(--green); }
   .sol-main-body { position: static; order: -1; padding: 16px 18px 14px; background: var(--green); }
-  .sol-main-body span { font-size: 0.92rem; }
+  .sol-main-body > span { font-size: 0.92rem; }
   .sol-mock { aspect-ratio: 16 / 9; }
 }
 
