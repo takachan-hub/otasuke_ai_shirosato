@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DC58WV2H6W"></script>
+  <!-- Google tag (gtag.js)：正式URL（canonical と同じホスト）のときだけ計測する。プレビュー・pages.dev・ローカルでは送信しない -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-DC58WV2H6W');
+    (function () {
+      var GA_MEASUREMENT_ID = 'G-DC58WV2H6W';
+      var PRODUCTION_HOSTNAME = 'www.otasuke-ai-shirosato.com';
+      if (location.hostname !== PRODUCTION_HOSTNAME) return;
+      var tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      document.head.appendChild(tag);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID);
+    })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -67,6 +67,7 @@
 ## GA4（クリック計測）
 
 - 測定ID：`G-DC58WV2H6W`
+- 計測は正式URL（`www.otasuke-ai-shirosato.com`）で開いたときだけです。`index.html` 冒頭のタグが `location.hostname` を `PRODUCTION_HOSTNAME` と完全一致で判定し、Cloudflare Pages のプレビュー・`otasuke-ai-shirosato.pages.dev`・ローカル確認では GA4 を読み込みません。
 - `script.js` が、電話・LINE・Googleマップ・Instagram へのリンクのクリックを `tel_click` / `line_click` / `map_click` / `instagram_click` として送信します。
 - 押された場所は各リンクの `data-ga-location` を `link_location` として送ります（このサイトでは `hero` / `footer`）。対象リンクを追加・変更したら属性を付け忘れないようにします。
 - 現在の対象は5件（LINE 3・電話 1・Instagram 1）です。地図リンクはないため `map_click` の対象は0件です。
@@ -88,5 +89,5 @@
 ## 運用メモ
 
 - ページやURLを増やした場合は `sitemap.xml` にURLを追加し、更新時は `<lastmod>` を直す
-- 公開URLを変更した場合は `canonical`・`og:url`・JSON-LD の `url`・`sitemap.xml`・`robots.txt` を合わせて直す
+- 公開URLを変更した場合は `canonical`・`og:url`・JSON-LD の `url`・`sitemap.xml`・`robots.txt` を合わせて直す（GA4タグの `PRODUCTION_HOSTNAME` も新しいホスト名に直す）
 - 制作実績を追加するときは `index.html` の `article.work-feature` を1件分複製し、画像は `assets/works/` に置く
