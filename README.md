@@ -54,9 +54,9 @@
 - `assets/people/`：人物素材（背景透過）
   - `woman-thinking-640.webp`（共感セクション）・`woman-guiding-640.webp`（料金セクション）が通常表示用
   - 同名の `.png` は WebP 非対応ブラウザ用の予備（`<picture>` の `<img src>`。削除しない）
-- `assets/works/`：制作実績「羊二」の画面素材（ファーストビューと制作実績で使用）
-  - `yoji.jpg`：PC表示の画面
-  - `yoji-sp.jpg`：スマートフォン表示の画面
+- `assets/works/`：制作実績の画面素材（PC＝1280×800、スマートフォン＝585×1266 のプログレッシブJPEG）
+  - `yoji.jpg` / `yoji-sp.jpg`：「羊二」のPC・スマートフォン表示（ファーストビューと制作実績で使用）
+  - `kenpoku-jokaso.jpg` / `kenpoku-jokaso-sp.jpg`：「県北浄化槽サービスセンター」のPC・スマートフォン表示（制作実績で使用。正式URLのファーストビューを撮影）
 
 「できること」のホームページ制作の図は、画像ではなく HTML/CSS の図形で描いています。
 
