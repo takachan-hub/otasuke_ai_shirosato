@@ -618,24 +618,19 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .review-link { justify-self: start; align-self: start; color: #fff; font-weight: 700; font-size: 0.88rem; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
 .review-link:hover { border-color: #fff; }
 .social-block { padding: 14px 16px; border-radius: 16px; background: rgba(255, 255, 255, 0.1); }
-.social-block h3 { margin: 0 0 8px; font-size: 0.86rem; color: #fff; }
-.social-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.social-block h3 { margin: 0; font-size: 0.86rem; color: #fff; }
+.social-note { margin: 2px 0 10px; font-size: 0.8rem; line-height: 1.6; color: #fff; }
+.social-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+/* ボタンは白で統一し、各社のブランドカラーはアイコンだけに使う */
 .social-grid a {
-  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-  min-height: 40px; padding: 8px 10px; border-radius: 10px;
-  color: #fff; font-weight: 700; font-size: 0.82rem; text-decoration: none;
-  transition: transform 0.2s, filter 0.2s;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 8px 12px; border-radius: 10px; background: var(--card);
+  color: var(--text); font-weight: 700; font-size: 0.86rem; text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
 }
-.social-grid .sns-icon { width: 16px; height: 16px; flex: 0 0 16px; }
-/* SNS各社のブランドカラー（変更しない） */
-.social-grid a.sns-btn.facebook  { background: linear-gradient(135deg, #1877f2, #0d5fd3); }
-.social-grid a.sns-btn.instagram { background: linear-gradient(135deg, #f58529 0%, #dd2a7b 45%, #8134af 75%, #515bd4 100%); }
-.social-grid a.sns-btn.x         { background: linear-gradient(135deg, #1a1a1a, #000); }
-.social-grid a.sns-btn.threads   { background: linear-gradient(135deg, #2a2a2a, #111); }
-.social-grid a.sns-btn.youtube   { background: linear-gradient(135deg, #ff0000, #cc0000); }
-.social-grid a.sns-btn.tiktok    { background: linear-gradient(135deg, #25f4ee, #000, #fe2c55); }
-.social-grid a.icon-only .sns-icon { width: 18px; height: 18px; flex-basis: 18px; }
-.social-grid a:hover, .social-grid a:focus-visible { transform: translateY(-2px); filter: brightness(1.08); }
+.social-grid .sns-icon { width: 20px; height: 20px; flex: 0 0 20px; }
+.social-grid a.sns-btn.youtube .sns-icon { color: #ff0000; }
+.social-grid a:hover, .social-grid a:focus-visible { transform: translateY(-2px); background: var(--green-tint); }
 
 /* ============================================
    FOOTER
@@ -789,8 +784,6 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   .contact-alt a[href^="mailto:"] .contact-value { font-size: min(1em, 4.3vw); }
   .contact-meta { margin-top: 28px; }
   .line-box { grid-template-columns: auto 1fr; }
-  .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .social-grid a:not(.icon-only) span { font-size: 0.74rem; }
 
   .footer-inner { flex-direction: column; align-items: flex-start; padding: 16px 0; }
 }
@@ -805,7 +798,6 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   .faq-list summary { padding-left: 44px; }
   .faq-list details p { padding-left: 16px; }
   .contact-alt { font-size: 0.86rem; }
-  .social-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* ============================================
