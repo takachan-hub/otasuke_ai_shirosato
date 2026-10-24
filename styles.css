@@ -237,6 +237,8 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 }
 .hero-mini { display: none; }
 .hero-visual-tag span { padding: 2px 10px; border-radius: 999px; background: var(--green); color: #fff; font-size: 0.78rem; }
+/* 架空のお店の制作イメージは、制作実績（緑）と区別して控えめなグレーにする */
+.hero-visual-tag.is-sample span { background: var(--bg-deep); color: var(--text-sub); border: 1px solid var(--line-strong); }
 
 /* ============================================
    PLACEHOLDER（差し替え予定の写真）
