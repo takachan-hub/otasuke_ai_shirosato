@@ -13,7 +13,7 @@
 
 ## ページ構成（上から）
 
-1. ファーストビュー（H1「ホームページを、もっと気軽に。」・HP制作の料金・羊二の実画面・LINE相談）
+1. ファーストビュー（H1「ホームページを、もっと気軽に。」・HP制作の料金・架空のお店の制作イメージ・LINE相談）
 2. 共感（`#worries`）
 3. できること（`#solutions`：HP制作・業務アプリ・AI伴走支援の入口）
 4. 制作実績（`#works`）
@@ -55,8 +55,11 @@
   - `woman-thinking-640.webp`（共感セクション）・`woman-guiding-640.webp`（料金セクション）が通常表示用
   - 同名の `.png` は WebP 非対応ブラウザ用の予備（`<picture>` の `<img src>`。削除しない）
 - `assets/works/`：制作実績の画面素材（PC＝1280×800、スマートフォン＝585×1266 のプログレッシブJPEG）
-  - `yoji.jpg` / `yoji-sp.jpg`：「羊二」のPC・スマートフォン表示（ファーストビューと制作実績で使用）
+  - `yoji.jpg` / `yoji-sp.jpg`：「羊二」のPC・スマートフォン表示（制作実績で使用）
   - `kenpoku-jokaso.jpg` / `kenpoku-jokaso-sp.jpg`：「県北浄化槽サービスセンター」のPC・スマートフォン表示（制作実績で使用。正式URLのファーストビューを撮影）
+- `assets/hero/`：ファーストビューの制作イメージ（**架空のお店「こむぎ舎」。実在の店舗・制作実績ではない**。サイズは `assets/works/` と同じ）
+  - `sample-shop.jpg` / `sample-shop-sp.jpg`：PC・スマートフォン表示。画面に「SAMPLE」、ページ側に「制作イメージ／架空のお店のホームページ例」と表示する
+  - 元のHTML・撮影スクリプト・写真（Canva の AI 画像生成）は `~/web-prototypes/_drafts/otasuke-hero-sample/` にある（公開しない）
 
 「できること」のホームページ制作の図は、画像ではなく HTML/CSS の図形で描いています。
 
