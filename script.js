@@ -75,8 +75,9 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
-// GA4 行動計測: 電話・LINE・Googleマップ・Instagram のリンククリックを専用イベントで送信
+// GA4 行動計測: 電話・LINE・Googleマップ・Instagram・YouTube のリンククリックを専用イベントで送信
 // - 仕様の正本は月次Webレポート docs/GA4_SETUP.md 6章（羊二HPの実装と同じ）
+// - youtube_click はこのサイト独自の追加（Instagram と同じ方式）。月次Webレポートの集計対象には未登録
 // - イベントの種類はリンク先（href）で判定。押された場所は各リンクの data-ga-location
 // - 電話番号は送らない（tel の link_url は送信せず、番号の文字は「電話番号」に置き換え）
 // - link_url はクエリ文字列を除いた「オリジン＋パス」
@@ -87,6 +88,7 @@ if (yearEl) {
     { eventName: 'line_click', matches: (url) => ['line.me', 'lin.ee'].includes(url.hostname) },
     { eventName: 'map_click', matches: (url) => /(^|\.)google\.[a-z.]+$/.test(url.hostname) && url.pathname.startsWith('/maps') },
     { eventName: 'instagram_click', matches: (url) => /(^|\.)instagram\.com$/.test(url.hostname) },
+    { eventName: 'youtube_click', matches: (url) => /(^|\.)youtube\.com$/.test(url.hostname) || url.hostname === 'youtu.be' },
   ];
 
   const linkText = (link) => {

@@ -73,9 +73,10 @@
 
 - 測定ID：`G-DC58WV2H6W`
 - 計測は正式URL（`www.otasuke-ai-shirosato.com`）で開いたときだけです。`index.html` 冒頭のタグが `location.hostname` を `PRODUCTION_HOSTNAME` と完全一致で判定し、Cloudflare Pages のプレビュー・`otasuke-ai-shirosato.pages.dev`・ローカル確認では GA4 を読み込みません。
-- `script.js` が、電話・LINE・Googleマップ・Instagram へのリンクのクリックを `tel_click` / `line_click` / `map_click` / `instagram_click` として送信します。
+- `script.js` が、電話・LINE・Googleマップ・Instagram・YouTube へのリンクのクリックを `tel_click` / `line_click` / `map_click` / `instagram_click` / `youtube_click` として送信します。
+  - `youtube_click` はこのサイト独自の追加（2026-10-25・Instagram と同じ方式）で、月次Webレポートの標準イベントには入っていません。月次Webレポートが対応するまで、レポートには表示されず、`hp:links`・`ga4:realtime` の一覧にも出ません。
 - 押された場所は各リンクの `data-ga-location` を `link_location` として送ります（このサイトでは `hero` / `footer`）。対象リンクを追加・変更したら属性を付け忘れないようにします。
-- 現在の対象は5件（LINE 3・電話 1・Instagram 1）です。地図リンクはないため `map_click` の対象は0件です。
+- 現在の対象は6件（LINE 3・電話 1・Instagram 1・YouTube 1）です。`hp:links` は標準の4イベントだけを数えるため「5件」と表示されます（YouTube 1件は含まれない）。地図リンクはないため `map_click` の対象は0件です。
 - 仕様の正本は月次Webレポートの `docs/GA4_SETUP.md` 6章です。リンクを変えたら月次Webレポートのリポジトリで確認します：
   - `npm run hp:links -- <index.html または 正式URL>`（`data-ga-location` の漏れがあると終了コード1）
   - `npm run ga4:realtime -- 555948320`（本番でボタンを押した直後の受信確認）
