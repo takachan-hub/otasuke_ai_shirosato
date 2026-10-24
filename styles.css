@@ -694,6 +694,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   .menu-toggle { width: 44px; height: 44px; }
 
   .hero { padding: 26px 0 56px; }
+  .hero .eyebrow::before { display: none; }
   .hero h1 { font-size: 1.95rem; }
   .hero-target { font-size: 0.98rem; margin-top: 6px; }
   .hero-price-main strong { font-size: 3.4rem; }
