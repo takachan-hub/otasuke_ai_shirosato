@@ -17,11 +17,12 @@
 2. 共感（`#worries`）
 3. できること（`#solutions`：HP制作・業務アプリ・AI伴走支援の入口）
 4. 制作実績（`#works`）
-5. ホームページ制作の料金（`#homepage` / `#pricing` / `#flow`）
-6. AI・業務アプリ（`#services` / `#service-app` / `#service-ai`）
-7. 選ばれる理由（`#strength`）
-8. FAQ（`#faq`）
-9. お問い合わせ（`#contact`）
+5. 制作のしくみ（`#method`：管理負担・表示・公開後・アクセス状況の4項目。部品は「選ばれる理由」と共通。メニューには載せない）
+6. ホームページ制作の料金（`#homepage` / `#pricing` / `#flow`）
+7. AI・業務アプリ（`#services` / `#service-app` / `#service-ai`）
+8. 選ばれる理由（`#strength`）
+9. FAQ（`#faq`）
+10. お問い合わせ（`#contact`）
 
 料金・契約条件の詳細はページ内の折りたたみ（`<details>`）に置き、表側は要点だけにしています。
 ページ内リンクで折りたたみの中へ移動したときは `script.js` が自動で開きます。

@@ -530,6 +530,10 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .reasons3 h3 { margin: 0; font-size: 1.15rem; color: var(--green-dark); line-height: 1.5; }
 .reasons3 p { margin: 0; font-size: 0.92rem; color: var(--text-sub); }
 
+/* 制作のしくみ（#method）：「選ばれる理由」の部品を4列で使う。タブレットは2列、スマホは .reasons3 と同じ縦並び */
+.method-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.method-points li { align-content: start; }
+
 /* ============================================
    8. FAQ
    ============================================ */
@@ -671,6 +675,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   .worries-grid { gap: 36px; }
   .after-band { grid-template-columns: 1fr; text-align: center; }
   .contact-sub { grid-template-columns: 1fr; }
+  .method-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 32px; }
 }
 
 @media (max-width: 720px) {
