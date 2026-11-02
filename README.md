@@ -1,6 +1,6 @@
 # お助けAI城里センター 公式サイト
 
-`https://www.otasuke-ai-shirosato.com/`（正式URLは www あり）の静的な1ページサイトです。
+`https://www.otasuke-ai-shirosato.com/`（正式URLは www あり）の静的なサイトです（トップページ＋お客様向けの説明ページ `/report-guide/`）。
 ビルド工程はなく、このフォルダのファイルをそのまま配信しています。
 
 ## 公開・デプロイ
@@ -46,6 +46,10 @@
 - `index.html`：ページ本体（meta / OGP / 構造化データ / GA4タグを含む）
 - `styles.css`：デザイン全体
 - `script.js`：メニュー、表示アニメーション、折りたたみの自動展開、送信テンプレートのコピー、GA4クリック計測
+- `report-guide/`：**月次Webレポートの見方**（全顧客共通の説明ページ。トップページのメニューには載せない）
+  - 月次Webレポートの PDF（2026年10月分以降）の末尾から `https://www.otasuke-ai-shirosato.com/report-guide/` へリンクしている。**URLを変えない・削除しない**（変えると配布済みPDFのリンクが切れる）
+  - 説明はレポートの実際の表示名・集計方法（月次Webレポートの `src/domain/labels.ts`・`reportOverview.ts`・`measurementConfig.ts`）に合わせている。レポート側の項目名・分類を変えたら、このページも直す
+  - `index.html`：本文（GA4 標準タグはトップページと同じ）／`guide.css`：このページだけの部品（色・ヘッダー・フッター・ボタンは `/styles.css` を共用）。パスはルート相対（`/styles.css` など）
 - `robots.txt` / `sitemap.xml`：クローラ向け設定
 - `google030902e84e6ce9b2.html`：Google Search Console の所有権確認用（削除しない）
 - `favicon.png` / `apple-touch-icon.png`：ブラウザ・iPhone用アイコン

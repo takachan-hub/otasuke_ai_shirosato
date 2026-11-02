@@ -1,0 +1,190 @@
+/* ============================================
+   月次Webレポートの見方（/report-guide/）
+   色・文字・ヘッダー・フッター・ボタンはトップページの styles.css をそのまま使い、
+   ここにはこのページだけの部品を置く
+   ============================================ */
+
+/* ヘッダー：トップページのメニューの代わりに「トップページへ」だけを置く */
+.guide-header { grid-template-columns: 1fr auto; }
+.guide-home {
+  justify-self: end; padding: 10px 18px; border-radius: 999px;
+  border: 2px solid var(--green); color: var(--green); font-weight: 700; font-size: 0.92rem;
+  text-decoration: none; white-space: nowrap;
+}
+.guide-home:hover, .guide-home:focus-visible { background: var(--green-tint); }
+
+.guide-shell { max-width: 860px; }
+#main [id] { scroll-margin-top: calc(var(--header-h) + 16px); }
+
+/* ページ冒頭 */
+.guide-hero { padding: 64px 0 56px; background: var(--bg); }
+.guide-hero h1 { margin: 0; font-size: clamp(2rem, 4.4vw, 2.8rem); line-height: 1.35; letter-spacing: 0.02em; }
+.guide-lead { margin: 18px 0 0; color: var(--text-sub); font-size: 1.05rem; }
+.guide-point {
+  display: flex; align-items: center; gap: 16px; margin: 28px 0 0; padding: 18px 20px;
+  background: var(--green-soft); border-radius: var(--radius-sm);
+}
+.guide-point img { width: 56px; height: 56px; flex: 0 0 56px; }
+.guide-point p { margin: 0; display: grid; gap: 2px; }
+.guide-point strong { color: var(--green-dark); font-size: 1.08rem; }
+
+.guide-toc { margin: 32px 0 0; padding: 20px 24px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.guide-toc-title { margin: 0 0 6px; font-weight: 700; color: var(--green-dark); }
+.guide-toc ol { margin: 0; padding-left: 1.6em; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 28px; }
+.guide-toc a { color: var(--green); font-weight: 700; text-decoration: none; }
+.guide-toc a:hover { text-decoration: underline; }
+
+/* 各章 */
+.guide-section { padding: 72px 0; background: var(--bg); }
+.guide-section-white { background: var(--bg-white); }
+.guide-section h2 {
+  display: flex; align-items: flex-start; gap: 12px; margin: 0 0 18px;
+  font-size: clamp(1.45rem, 3vw, 1.9rem); line-height: 1.45;
+}
+.guide-section h2 > span:last-child { min-width: 0; }
+.guide-num {
+  flex: 0 0 auto; display: inline-grid; place-items: center; min-width: 40px; height: 40px; padding: 0 8px;
+  margin-top: 2px; border-radius: 50%; background: var(--green); color: #fff; font-size: 1.1rem;
+}
+.h2-sub { display: block; font-size: 0.6em; color: var(--text-sub); font-weight: 700; }
+.guide-section > .shell > p { margin: 0 0 18px; }
+.guide-section h3 { margin: 0 0 8px; font-size: 1.08rem; color: var(--green-dark); line-height: 1.55; }
+
+.guide-box { margin: 20px 0 0; padding: 20px 22px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.guide-section-white .guide-box { background: var(--bg); }
+.guide-box p { margin: 0; }
+.guide-box p + p { margin-top: 10px; }
+/* 特に読んでいただきたい注意（オレンジは装飾の線だけに使い、文字は濃い色のまま） */
+.guide-box-key { border-left: 6px solid var(--accent); background: var(--accent-soft) !important; border-color: #F3D2B6; border-left-color: var(--accent); }
+.guide-box-key h3 { color: var(--accent-ink); }
+
+.guide-dots { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.guide-dots em { font-style: normal; font-weight: 700; }
+.term-sub { margin: 12px 0 0; font-size: 0.9rem; color: var(--text-note); }
+
+/* 1. 全体像 */
+.guide-map { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: map; }
+.guide-map li {
+  counter-increment: map; position: relative; display: grid; gap: 0 12px; grid-template-columns: 36px 1fr;
+  padding: 12px 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm);
+}
+.guide-map li::before {
+  content: counter(map); grid-row: span 2; align-self: center; display: grid; place-items: center;
+  width: 32px; height: 32px; border-radius: 50%; background: var(--green-soft); color: var(--green-dark); font-weight: 700;
+}
+.guide-map b { color: var(--text); }
+.guide-map span { font-size: 0.9rem; color: var(--text-sub); }
+
+.guide-status { margin: 0; display: grid; gap: 12px; }
+.guide-status dt { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.guide-status dd { margin: 2px 0 0 36px; font-size: 0.94rem; color: var(--text-sub); }
+.st { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; border: 2px solid; font-size: 0.95rem; line-height: 1; }
+.st-collect { color: var(--green-dark); border-color: #9DBFAE; }
+.st-ok { color: var(--green); border-color: var(--green); }
+.st-warn { color: var(--accent-ink); border-color: var(--accent); }
+.st-wait { color: var(--text-muted); border-color: var(--line-strong); }
+
+/* 2. 主要数字 */
+.term-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.term-card { padding: 20px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.guide-section-white .term-card { background: var(--bg); }
+.term-card p { margin: 0; }
+.term-card p + p { margin-top: 6px; }
+.term-label { color: var(--green-dark); font-weight: 800; font-size: 1.12rem; }
+.term-label small { margin-left: 4px; font-size: 0.78rem; font-weight: 700; color: var(--text-sub); }
+.term-card .term-sub { margin-top: 10px; }
+
+.guide-example { margin: 24px 0 0; padding: 22px; background: var(--green-tint); border: 1px dashed #9DBFAE; border-radius: var(--radius-sm); }
+.guide-example figcaption { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; font-weight: 700; }
+.ex-tag { flex: 0 0 auto; padding: 1px 12px; border-radius: 999px; background: var(--green); color: #fff; font-size: 0.82rem; }
+.visit-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.visit { padding: 14px 16px; background: var(--card); border-radius: 12px; border: 1px solid var(--line); }
+.visit-when { margin: 0 0 6px; font-weight: 700; color: var(--green-dark); font-size: 0.92rem; }
+.visit ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.visit li { padding: 2px 10px; border-radius: 6px; background: var(--bg-deep); font-size: 0.86rem; }
+.visit-result { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 14px 0 0; }
+.visit-result div { padding: 10px; text-align: center; background: var(--card); border-radius: 12px; border: 2px solid var(--green-soft); }
+.visit-result dt { font-size: 0.82rem; font-weight: 700; color: var(--text-sub); }
+.visit-result dd { margin: 0; font-size: 1.8rem; font-weight: 800; color: var(--green-dark); line-height: 1.3; }
+.visit-result small { margin-left: 2px; font-size: 0.5em; }
+
+/* 3. 前月比較 */
+.trend-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.trend-list li { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.tr { flex: 0 0 auto; font-weight: 800; font-size: 1.1rem; width: 1.4em; text-align: center; }
+.tr-up { color: var(--green); }
+.tr-down { color: #B4472B; }
+.tr-flat { color: var(--text-muted); }
+
+/* 4. 流入元 */
+.source-list { margin: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.source-list > div { display: grid; grid-template-columns: 13rem 1fr; gap: 4px 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.source-list dt { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.source-list dd { margin: 0; color: var(--text-sub); }
+.src-dot { width: 14px; height: 14px; flex: 0 0 14px; border-radius: 4px; }
+.src-search { background: var(--green); }
+.src-direct { background: var(--accent); }
+.src-sns { background: #7A9CC6; }
+.src-ref { background: #A8C686; }
+.src-ad { background: #C9A86A; }
+.src-other { background: var(--line-strong); }
+
+/* 5. 直接アクセス */
+.direct-figure { margin: 0; padding: 22px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.direct-figure figcaption { margin: 0 0 14px; font-weight: 700; color: var(--green-dark); }
+.direct-items { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.direct-items li { display: grid; gap: 2px; padding: 12px 14px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent); }
+.direct-items span { font-size: 0.88rem; color: var(--text-sub); }
+
+/* 6. 端末 */
+.device-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.device-list li { display: grid; gap: 2px; padding: 14px 16px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; text-align: center; }
+.device-list b { color: var(--green-dark); }
+.device-list span { font-size: 0.86rem; color: var(--text-sub); }
+
+/* 8・9. 用語の一覧 */
+.guide-defs { margin: 20px 0 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.guide-defs > div { display: grid; grid-template-columns: 13rem 1fr; gap: 4px 20px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.guide-defs dt { font-weight: 700; color: var(--green-dark); }
+.guide-defs dd { margin: 0; color: var(--text-sub); }
+.term-grid-2 + .guide-box { margin-top: 20px; }
+
+/* 10. 問い合わせ案内 */
+.guide-ask { margin: 32px 0 0; padding: 24px; text-align: center; background: var(--green-soft); border-radius: var(--radius); }
+.guide-ask p { margin: 0 0 14px; font-weight: 700; color: var(--green-dark); }
+
+/* ============================================
+   RESPONSIVE（トップページと同じ境目 720px / 360px）
+   ============================================ */
+@media (max-width: 720px) {
+  .guide-hero { padding: 36px 0 40px; }
+  .guide-hero h1 { font-size: 1.9rem; }
+  .guide-lead { font-size: 1rem; }
+  .guide-point { padding: 14px 16px; gap: 12px; }
+  .guide-point img { width: 44px; height: 44px; flex-basis: 44px; }
+  .guide-toc { padding: 16px 18px; }
+  .guide-toc ol { grid-template-columns: minmax(0, 1fr); }
+  .guide-section { padding: 48px 0; }
+  .guide-section h2 { font-size: 1.35rem; gap: 10px; }
+  .guide-num { min-width: 34px; height: 34px; font-size: 1rem; margin-top: 0; }
+  .guide-box, .direct-figure, .guide-example { padding: 16px; }
+  .term-grid, .visit-flow, .direct-items { grid-template-columns: minmax(0, 1fr); }
+  .term-card { padding: 16px; }
+  .visit-result dd { font-size: 1.5rem; }
+  .source-list > div, .guide-defs > div { grid-template-columns: minmax(0, 1fr); }
+  .device-list { grid-template-columns: minmax(0, 1fr); }
+  .device-list li { grid-template-columns: auto 1fr; gap: 12px; text-align: left; align-items: baseline; }
+  .guide-ask .btn { width: 100%; }
+  .guide-home { padding: 8px 14px; font-size: 0.86rem; }
+}
+
+@media (max-width: 360px) {
+  .guide-hero h1 { font-size: 1.7rem; }
+  .visit-result { gap: 6px; }
+  .visit-result dt { font-size: 0.74rem; }
+}
+
+@media print {
+  .site-header, .guide-toc, .guide-ask .btn { display: none; }
+  .guide-section, .guide-hero { padding: 24px 0; }
+}

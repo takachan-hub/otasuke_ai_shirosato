@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js)：正式URL（canonical と同じホスト）のときだけ計測する。プレビュー・pages.dev・ローカルでは送信しない（トップページと同じ標準タグ） -->
+  <script>
+    (function () {
+      var GA_MEASUREMENT_ID = 'G-DC58WV2H6W';
+      var PRODUCTION_HOSTNAME = 'www.otasuke-ai-shirosato.com';
+      if (location.hostname !== PRODUCTION_HOSTNAME) return;
+      var tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      document.head.appendChild(tag);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>月次Webレポートの見方 | お助けAI城里センター</title>
+  <meta name="description" content="お助けAI城里センターが毎月お届けする「月次Webレポート」の見方です。訪問した人・訪問回数・ページ閲覧数、どこから訪問されたか、電話やLINEのクリック、前月との比較や改善提案の読み方を、専門用語をできるだけ使わずにご説明します。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.otasuke-ai-shirosato.com/report-guide/">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="お助けAI城里センター">
+  <meta property="og:title" content="月次Webレポートの見方 | お助けAI城里センター">
+  <meta property="og:description" content="毎月お届けする「月次Webレポート」の数字の意味と読み方を、具体例でご説明します。">
+  <meta property="og:url" content="https://www.otasuke-ai-shirosato.com/report-guide/">
+  <meta property="og:image" content="https://www.otasuke-ai-shirosato.com/ai-character.png">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/report-guide/guide.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="shell header-inner guide-header">
+      <a class="brand" href="/" aria-label="お助けAI城里センター トップページへ">
+        <img src="/assets/ai-character-160.png" alt="お助けAI城里センターのキャラクター" width="160" height="160">
+        <span>
+          <strong><span class="nw">お助</span>けAI城里<span class="nw">センター</span></strong>
+          <small><span class="nb">城里町の</span><span class="nb"><span class="nw">ホームページ</span>制作・</span><span class="nb">AI活用支援</span></small>
+        </span>
+      </a>
+      <a class="guide-home" href="/"><span class="nw">トップページ</span>へ</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ページ冒頭：何のページか・どう読めばよいか -->
+    <section class="guide-hero">
+      <div class="shell guide-shell">
+        <p class="eyebrow">お客様向けガイド</p>
+        <h1><span class="nb"><span class="nw">月次Webレポート</span>の</span><span class="nb">見方</span></h1>
+        <p class="guide-lead">毎月お届けしている「<span class="nw">月次Webレポート</span>」に出てくる数字や言葉の意味を、具体例を使ってご説明します。レポートを見ながら、気になるところだけ読んでいただければ大丈夫です。</p>
+        <div class="guide-point">
+          <img src="/assets/ai-character-160.png" alt="" width="160" height="160">
+          <p><strong>まず見るところは2つだけ</strong><span>「1. 今月の総評」と「今月の改善提案」です。細かい数字は、気になったときに確かめる程度で十分です。</span></p>
+        </div>
+
+        <nav class="guide-toc" aria-label="このページの目次">
+          <p class="guide-toc-title">目次</p>
+          <ol>
+            <li><a href="#overview">レポートの全体像</a></li>
+            <li><a href="#numbers">主要数字（訪問した人・訪問回数・ページ閲覧数）</a></li>
+            <li><a href="#compare">前月との比較・推移の見方</a></li>
+            <li><a href="#sources">どこから訪問されたか</a></li>
+            <li><a href="#direct">「直接アクセス」について</a></li>
+            <li><a href="#devices">スマートフォン／パソコン</a></li>
+            <li><a href="#pages">よく見られたページ・最初に開かれたページ</a></li>
+            <li><a href="#actions">電話・LINE・地図などのクリック</a></li>
+            <li><a href="#proposals">良かった点・気になる点・改善提案</a></li>
+            <li><a href="#notes">数字を見るときの注意</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 1. 全体像 -->
+    <section id="overview" class="guide-section">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">1</span><span>レポートの全体像</span></h2>
+        <p>レポートは次の順番で並んでいます。上から順に「結論 → 数字 → 中身 → これからのこと」という流れです。</p>
+        <ol class="guide-map">
+          <li><b>今月の総評</b><span>今月の状況をひとことで。まずここをご覧ください。</span></li>
+          <li><b>今月の主要数字</b><span>訪問した人・訪問回数・ページ閲覧数・平均閲覧時間</span></li>
+          <li><b>アクセスの推移</b><span>月ごとの増え方・減り方をグラフで</span></li>
+          <li><b>どんなアクセスだったか</b><span>どこから来たか・使った端末・見られたページ</span></li>
+          <li><b>問い合わせ（・来店）につながる行動</b><span>電話・LINE・地図などが押された回数</span></li>
+          <li><b>良かった点・気になる点</b><span>数字から読み取れたこと</span></li>
+          <li><b>今月の改善提案</b><span>ホームページをより良くするためのご提案</span></li>
+        </ol>
+        <div class="guide-box">
+          <h3>「今月の状況」の表示について</h3>
+          <dl class="guide-status">
+            <div><dt><span class="st st-collect" aria-hidden="true">◔</span>データ蓄積中</dt><dd>公開して間もない、または訪問がまだ少ない時期です。良し悪しの判断は、データがたまってからお伝えします。</dd></div>
+            <div><dt><span class="st st-ok" aria-hidden="true">✓</span>大きな問題なし</dt><dd>特に気になる点は見られなかった月です。</dd></div>
+            <div><dt><span class="st st-warn" aria-hidden="true">!</span>確認したい点あり</dt><dd>「気になる点」に書いた内容があります。悪いという意味ではなく、一緒に確認したいことがある、という印です。</dd></div>
+            <div><dt><span class="st st-wait" aria-hidden="true">…</span>データ準備中</dt><dd>その月のデータがまだそろっていない状態です。</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 主要数字 -->
+    <section id="numbers" class="guide-section guide-section-white">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">2</span><span>主要数字の意味</span></h2>
+        <p>レポートの「今月の主要数字」には、次の4つが大きく表示されます。</p>
+
+        <div class="term-grid">
+          <article class="term-card">
+            <p class="term-label">訪問した人<small>（ユーザー数）</small></p>
+            <p>その月にホームページを訪れた<strong>人の数</strong>です。同じ人が何回来ても「1人」と数えます。</p>
+            <p class="term-sub">「うち初めての人」は、その月に初めて訪れた人の数です。</p>
+          </article>
+          <article class="term-card">
+            <p class="term-label">訪問回数<small>（セッション数）</small></p>
+            <p>ホームページが<strong>訪問された回数</strong>です。同じ人が、日を変えたり時間をあけたりしてまた来ると、もう1回と数えます。</p>
+          </article>
+          <article class="term-card">
+            <p class="term-label">ページ閲覧数<small>（表示回数）</small></p>
+            <p>見られた<strong>ページの合計</strong>です。1回の訪問で「トップページ」と「メニュー」を見ると、2ページと数えます。</p>
+          </article>
+          <article class="term-card">
+            <p class="term-label">平均閲覧時間</p>
+            <p>ホームページが画面に表示されていた時間の、<strong>1人あたりの平均</strong>です。長いほど、じっくり読まれていると考えられます。</p>
+          </article>
+        </div>
+
+        <!-- 図解：1人が2回訪問して4ページ見た場合 -->
+        <figure class="guide-example" aria-labelledby="example-numbers-title">
+          <figcaption id="example-numbers-title"><span class="ex-tag">例</span>Aさんが、ある月に2回ホームページを見た場合</figcaption>
+          <div class="visit-flow">
+            <div class="visit">
+              <p class="visit-when">1回目（5日）</p>
+              <ul><li>トップページ</li><li>メニュー</li><li>アクセス</li></ul>
+            </div>
+            <div class="visit">
+              <p class="visit-when">2回目（20日）</p>
+              <ul><li>アクセス</li></ul>
+            </div>
+          </div>
+          <dl class="visit-result">
+            <div><dt>訪問した人</dt><dd>1<small>人</small></dd></div>
+            <div><dt>訪問回数</dt><dd>2<small>回</small></dd></div>
+            <div><dt>ページ閲覧数</dt><dd>4<small>ページ</small></dd></div>
+          </dl>
+          <p class="term-sub">ですので、数字の大きさはふつう「ページ閲覧数 ≧ 訪問回数 ≧ 訪問した人」の順になります。</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3. 前月比較・推移 -->
+    <section id="compare" class="guide-section">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">3</span><span>前月との比較・推移の見方</span></h2>
+        <p>主要数字の下には、前の月と比べた変化が表示されます。</p>
+        <ul class="trend-list">
+          <li><span class="tr tr-up" aria-hidden="true">▲</span><span><b>前月比 ＋○％</b>　前の月より増えました。</span></li>
+          <li><span class="tr tr-down" aria-hidden="true">▼</span><span><b>前月比 −○％</b>　前の月より減りました。</span></li>
+          <li><span class="tr tr-flat" aria-hidden="true">→</span><span><b>前月とほぼ同じ</b>　増減が3％未満のときの表示です。</span></li>
+        </ul>
+        <div class="guide-box">
+          <h3>割合が出ず「前月 ○人」とだけ出る月</h3>
+          <p>前の月のデータがない月や、訪問回数が1か月10回未満と少ない月は、増減の割合を出しても意味が小さいため、前の月の数字だけを並べています。</p>
+        </div>
+        <div class="guide-box">
+          <h3>「アクセスの推移」のグラフ</h3>
+          <p>月ごとの「訪問した人」と「訪問回数」の折れ線グラフです。1か月だけの上がり下がりより、<strong>数か月続けて上向きか・下向きか</strong>を見るのがおすすめです。季節やお店の行事、天気などでも数字は変わります。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 流入元 -->
+    <section id="sources" class="guide-section guide-section-white">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">4</span><span>どこから訪問されたか</span></h2>
+        <p>ホームページに「何を通って来たか」の内訳です。数字は<strong>訪問回数</strong>で、割合（％）と一緒に表示されます。</p>
+        <dl class="source-list">
+          <div>
+            <dt><span class="src-dot src-search" aria-hidden="true"></span>検索（Google等）</dt>
+            <dd>Google・Yahoo!などで調べて、検索結果から来た訪問です。お店の名前や「城里町 ○○」などで探してくれた方が多く含まれます。</dd>
+          </div>
+          <div>
+            <dt><span class="src-dot src-direct" aria-hidden="true"></span>直接アクセス</dt>
+            <dd>URLの直接入力やブックマークなどからの訪問のほか、<strong>どこから来たのか分からなかった訪問</strong>もここに入ります。とても大事な項目なので、<a href="#direct">次の項目</a>で詳しくご説明します。</dd>
+          </div>
+          <div>
+            <dt><span class="src-dot src-sns" aria-hidden="true"></span>SNS</dt>
+            <dd>Instagram・Facebook・YouTubeなど、SNSからと分かった訪問です。</dd>
+          </div>
+          <div>
+            <dt><span class="src-dot src-ref" aria-hidden="true"></span>他サイトからのリンク</dt>
+            <dd>地域の紹介サイトや取引先のホームページなど、ほかのサイトに貼られたリンクからの訪問です。</dd>
+          </div>
+          <div>
+            <dt><span class="src-dot src-ad" aria-hidden="true"></span>広告</dt>
+            <dd>インターネット広告からの訪問です。広告を出していない場合は、ふつう表示されません。</dd>
+          </div>
+          <div>
+            <dt><span class="src-dot src-other" aria-hidden="true"></span>その他</dt>
+            <dd>メールマガジンなど上のどれにも当てはまらない訪問です。項目が多い月は、少ないものをまとめて「その他」にしています。</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 5. 直接アクセス（特に重要） -->
+    <section id="direct" class="guide-section">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">5</span><span>「直接アクセス」について<small class="h2-sub">（直接・流入元不明）</small></span></h2>
+        <p>「直接アクセス」は、名前から「URLを直接入力した人」だけと思われがちですが、実際には<strong>どこから来たのかの情報が届かなかった訪問</strong>もまとめて入る項目です。</p>
+
+        <figure class="direct-figure" aria-labelledby="direct-title">
+          <figcaption id="direct-title">「直接アクセス」に入る主な訪問</figcaption>
+          <ul class="direct-items">
+            <li><b>URLの直接入力</b><span>アドレス欄に打ち込んで開いた</span></li>
+            <li><b>ブックマーク・お気に入り</b><span>保存しておいたページから開いた</span></li>
+            <li><b>QRコード</b><span>チラシ・名刺・店頭のQRコードを読み取った</span></li>
+            <li><b>LINE・メール・SNSなど</b><span>アプリ内のリンクから開き、どこから来たかの情報が届かなかった</span></li>
+          </ul>
+        </figure>
+
+        <div class="guide-box guide-box-key">
+          <h3>LINEやSNSからの訪問は、必ず「直接アクセス」になるわけではありません</h3>
+          <p>同じLINEやSNSからの訪問でも、使っているアプリやスマートフォンの種類、開き方によって、「SNS」や「他サイトからのリンク」に分類されることもあれば、「直接アクセス」に入ることもあります。</p>
+          <p><strong>そのため、「直接アクセス」のうち、何がどれだけだったのか（QRコードが何回、LINEが何回など）は、レポートでは特定できません。</strong></p>
+        </div>
+
+        <div class="guide-box">
+          <h3>読み方のヒント</h3>
+          <ul class="guide-dots">
+            <li>チラシにQRコードを載せた月や、LINEでホームページを案内した月に「直接アクセス」が増えた場合は、その取り組みが影響した<em>可能性</em>があります。</li>
+            <li>ただし、上のとおり内訳は分からないため、「QRコードから○回来た」と言い切ることはできません。</li>
+            <li>常連のお客様がブックマークから見てくださっている場合も、ここに入ります。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 端末 -->
+    <section id="devices" class="guide-section guide-section-white">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">6</span><span>スマートフォン／パソコン</span></h2>
+        <p>訪れた人が、どの端末でホームページを見たかの内訳です。数字は<strong>人数</strong>です。</p>
+        <ul class="device-list">
+          <li><b>スマートフォン</b><span>iPhone・Androidなど</span></li>
+          <li><b>パソコン</b><span>デスクトップ・ノートパソコン</span></li>
+          <li><b>タブレット</b><span>iPadなど</span></li>
+        </ul>
+        <p class="term-sub">スマートフォンとパソコンの両方で見た人は、それぞれに数えられることがあります。地域のお店のホームページでは、スマートフォンが多くを占めることがよくあります。</p>
+      </div>
+    </section>
+
+    <!-- 7. ページ -->
+    <section id="pages" class="guide-section">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">7</span><span>よく見られたページ・最初に開かれたページ</span></h2>
+        <div class="term-grid term-grid-2">
+          <article class="term-card">
+            <p class="term-label">よく見られたページ</p>
+            <p>見られた回数（ページ閲覧数）が多いページの上位5つです。お客様が<strong>特に関心を持っている情報</strong>の目安になります。</p>
+          </article>
+          <article class="term-card">
+            <p class="term-label">最初に開かれたページ</p>
+            <p>訪問したときに<strong>一番はじめに開かれたページ</strong>の上位5つで、数字は訪問回数です。ホームページの「入口」がどこかが分かります。</p>
+          </article>
+        </div>
+        <figure class="guide-example">
+          <figcaption><span class="ex-tag">例</span>こんなことが分かります</figcaption>
+          <ul class="guide-dots">
+            <li>「メニュー」のページが最初に開かれることが多い → 検索から直接メニューを見に来る方が多い</li>
+            <li>「アクセス」のページがよく見られている → 来店前に場所を確かめている方が多い</li>
+          </ul>
+          <p class="term-sub">ページ名はページのタイトルで表示します。トップページは「トップページ」と表示しています。</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 8. 行動（クリック） -->
+    <section id="actions" class="guide-section guide-section-white">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">8</span><span>電話・LINE・地図などのクリック</span></h2>
+        <p>ホームページの中のボタンやリンクが押された回数です。計測の設定をしているホームページだけに表示されます。</p>
+        <div class="term-grid term-grid-2">
+          <article class="term-card">
+            <p class="term-label">問い合わせにつながる行動</p>
+            <p>電話番号のタップ、LINEボタンのクリック、メールアドレスのクリック、お問い合わせフォームの送信など。</p>
+          </article>
+          <article class="term-card">
+            <p class="term-label">来店・関心につながる行動</p>
+            <p>Googleマップ・Instagram・YouTubeなどを開いた回数です。地図やSNSのボタンがあるホームページで表示されます。</p>
+          </article>
+        </div>
+        <div class="guide-box guide-box-key">
+          <h3>「押された回数」＝「実際の電話・来店の数」ではありません</h3>
+          <p>電話番号をタップしても、実際には電話をかけなかった場合もあります。反対に、ホームページを見たあとで番号を手で入力して電話をかけた場合は数えられません。<strong>お問い合わせへの関心の目安</strong>としてご覧ください。</p>
+        </div>
+        <dl class="guide-defs">
+          <div><dt>押された場所</dt><dd>「メイン案内」「ページ下部」「画面下ボタン」など、同じボタンがページ内のどこで押されたかを表示する場合があります。</dd></div>
+          <div><dt>「現在は計測していません」</dt><dd>計測の設定をしていないため、件数が分からない状態です。「0件」とは意味が違います。</dd></div>
+          <div><dt>「今月は記録がありませんでした」</dt><dd>計測はしていて、その月に押された記録がなかった（0件）という意味です。</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 9. 評価と改善提案 -->
+    <section id="proposals" class="guide-section">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">9</span><span>良かった点・気になる点・改善提案</span></h2>
+        <p>数字から読み取れたことを、当<span class="nw">センター</span>が言葉にまとめた部分です。</p>
+        <dl class="guide-defs">
+          <div><dt>良かった点・気になる点</dt><dd>その月の数字で目立ったことです。データがまだ少ない時期は、まとめて「評価は、データがたまってからお伝えします。」と表示します。</dd></div>
+          <div><dt>今月の改善提案</dt><dd>ホームページをより見やすく・使いやすくするためのご提案です。それぞれに「理由」と「期待できること」を書いています。</dd></div>
+          <div><dt>優先度：高</dt><dd>特に早めの対応をおすすめするご提案に付けています。</dd></div>
+          <div><dt>対応の区分</dt><dd>「運用保守内で対応」は月額の運用・保守料金の範囲で対応できるもの、「別途有償対応」は別にお見積りが必要なもの、「要相談」は内容を一緒に確認してから決めるものです。</dd></div>
+          <div><dt>前回からの改善・その後</dt><dd>以前のご提案で実施した改善と、その後の数字の様子です。「今月の総評」の中に表示します。</dd></div>
+        </dl>
+        <div class="guide-box">
+          <h3>改善提案は「必ず実施するもの」ではありません</h3>
+          <p>ご提案を見て、実施するかどうかはお客様が決めていただけます。お客様の<span class="nw">ご承諾</span>なしに作業を進めたり、費用が発生したりすることはありません。改善の必要がない月は、提案がないこともあります。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. 注意 -->
+    <section id="notes" class="guide-section guide-section-white">
+      <div class="shell guide-shell">
+        <h2><span class="guide-num">10</span><span>数字を見るときの注意</span></h2>
+        <ul class="guide-dots">
+          <li>レポートの数字は、Googleのアクセス解析サービス「Google アナリティクス 4」の計測データにもとづいています。</li>
+          <li>ブラウザの設定などによっては計測されない訪問もあるため、実際の訪問とぴったり一致するものではありません。<strong>増えたか・減ったかの傾向</strong>を見る目安としてご覧ください。</li>
+          <li>お店の方やご家族がホームページを確認した分も、数字に含まれることがあります。</li>
+          <li>数字の変化には、季節・行事・天気・広告など、ホームページ以外の理由も影響します。</li>
+        </ul>
+        <div class="guide-ask">
+          <p><span class="nb">分からないところや</span><span class="nb">気になる数字があれば、</span><span class="nb">いつでもお気軽に</span><span class="nb">お尋ねください。</span></p>
+          <a class="btn btn-ghost" href="/#contact"><span class="nw">お問い合わせ</span>方法を見る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span id="current-year">2026</span> <span class="nw">お助</span>けAI城里<span class="nw">センター</span></p>
+      <div class="footer-links">
+        <a href="#main"><span class="nw">ページ</span>の先頭へ</a>
+        <a href="/"><span class="nw">トップページ</span>へ</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
