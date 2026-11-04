@@ -51,5 +51,5 @@
 
 @media (max-width: 560px) {
   .sc-defs > div { grid-template-columns: 1fr; }
-  .sc-home { max-width: 7.6em; padding: 6px 12px; border-radius: 16px; font-size: 0.82rem; line-height: 1.35; white-space: normal; text-align: center; }
+  .sc-home { max-width: 11em; padding: 6px 12px; border-radius: 16px; font-size: 0.82rem; line-height: 1.35; white-space: normal; text-align: center; }
 }
