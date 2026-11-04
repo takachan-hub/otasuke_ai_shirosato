@@ -54,7 +54,7 @@
         <p>本ポリシーは、本アプリが取り扱う情報と、その利用・保存・保護の方法を説明するものです。公式サイトのその他のページは、本ポリシーの対象ではありません。</p>
 
         <h2>2. 機能の提供状況</h2>
-        <p>本ポリシーでは、機能の状況を次のように示します。<span class="sc-badge sc-badge-plan">準備中</span>の記載は、その機能の提供を始めたときに適用します。提供を始めるときは、実際の内容に合わせて本ページを更新します。</p>
+        <p>本ポリシーでは、機能の状況を次のように示します。<span class="sc-badge sc-badge-plan">準備中</span>の記載は、その機能の提供を始めたときに適用します。ただし「7. Google ユーザーデータの取り扱い」は、当センターの代表者が Google アカウントで本アプリとの連携を許可した時点から適用します。提供を始めるときは、実際の内容に合わせて本ページを更新します。</p>
         <ul class="sc-status">
           <li><span class="sc-badge sc-badge-ready">提供中</span><span>書類の撮影、画像の自動補正、撮り直し、端末への保存</span></li>
           <li><span class="sc-badge sc-badge-plan">準備中</span><span>当センターの Google Drive への保存、Google Picker による保存先フォルダの選択、お客様ごとの管理、端末の登録</span></li>
@@ -71,6 +71,7 @@
           <li><strong>撮影した書類の画像</strong><span class="sc-badge sc-badge-ready">提供中</span>：撮影と補正はご利用の端末の中で行います。提供中の機能では、画像を当センターのサーバーへ送信しません。</li>
           <li><strong>ログインに関する情報</strong><span class="sc-badge sc-badge-ready">提供中</span>：Cloudflare Access の認証で使用するメールアドレスなどの情報です。</li>
           <li><strong>書類の画像の送信</strong><span class="sc-badge sc-badge-plan">準備中</span>：利用者が送信の操作をした画像を、当センターの Google Drive へ保存します。</li>
+          <li><strong>Google API から受け取る情報</strong><span class="sc-badge sc-badge-plan">準備中</span>：「7. Google ユーザーデータの取り扱い」に記載します。</li>
           <li><strong>お客様と端末の管理情報</strong><span class="sc-badge sc-badge-plan">準備中</span>：管理用の呼び名、端末の管理用の名前、登録日時、最終利用日時、保存の記録（日時、結果、画像の大きさ、画像の内容から計算した識別値、Google Drive 上のファイルの識別子）です。</li>
           <li><strong>不正利用を防ぐための情報</strong><span class="sc-badge sc-badge-plan">準備中</span>：回数の制限のために接続元の情報を扱います。元の値に戻せない形に変換して扱います。</li>
         </ul>
@@ -90,9 +91,12 @@
         <p>保存した書類は、ご契約に基づく業務のために当センターの担当者が確認します。</p>
 
         <h2>7. Google ユーザーデータの取り扱い<span class="sc-h2-badge"><span class="sc-badge sc-badge-plan">準備中</span></span></h2>
-        <p>本章は、Google Drive との連携の提供を始めたときに適用します。</p>
+        <p>本章は、当センターの代表者が Google アカウントで本アプリとの連携を許可した時点から適用します。現時点では、Google Drive への保存の機能はお客様に提供していません。</p>
         <h3>連携の方法</h3>
-        <p>本アプリは、当センターの代表者が当センターの Google アカウントで許可した権限により、Google Drive を利用します。お客様に Google アカウントでのログインをお願いすることはありません。</p>
+        <p>本アプリは、当センターの代表者が当センターの Google アカウントで許可した権限により、Google Drive を利用します。本章の「Google アカウントの利用者」とは、この連携を許可した当センターの代表者をいいます。本アプリのお客様に Google アカウントでのログインをお願いすることはなく、お客様の Google アカウントの情報を取得することもありません。</p>
+        <h3>お客様の書類と Google API の情報の区別</h3>
+        <p>本章の「Google API から受け取った情報」とは、本アプリが Google の API を通じて取得するフォルダやファイルの情報（識別子・名前など）をいいます。お客様が本アプリから送信する書類の画像は、Google API から受け取る情報ではなく、お客様から当センターへ直接送信されるものです。</p>
+        <p>本アプリは、Google Drive API を通じて保存済み書類の本文や画像を取得・解析する機能を設けていません。保存した書類は、当センターの担当者が契約に基づく業務のため、Google Drive 上で直接確認します。</p>
         <h3>要求する権限</h3>
         <p>本アプリが Google アカウントに要求する権限は <code>https://www.googleapis.com/auth/drive.file</code> だけです。この権限は、本アプリが作成したファイルと、当センターが Google Picker で選択したフォルダを扱うためのものです。Google Drive 内のその他のファイルを閲覧・検索するためのものではありません。Gmail、連絡先、カレンダーなどへのアクセスは要求しません。</p>
         <h3>取得・利用する情報と目的</h3>
@@ -102,31 +106,41 @@
           <li><strong>本アプリが保存したファイルの情報</strong>（識別子、保存先、本アプリが付けた管理用の識別子）：正しいフォルダに保存されたことの確認と、二重の保存の防止に使用します。</li>
         </ul>
         <p>本アプリが Google Drive 上で行う操作は、保存先フォルダの確認、書類の画像の保存、二重の保存を防ぐための確認、および保存先に誤りがあった場合に本アプリ自身が作成したファイルを削除することに限ります。ファイルやフォルダの共有設定の変更、公開リンクの作成は行いません。</p>
+        <h3>保存する場所と期間</h3>
+        <ul>
+          <li><strong>フォルダの識別子と名前、本アプリが保存したファイルの識別子</strong>：Cloudflare D1 に保存します。お客様の保存先の管理、保存の確認、二重の保存の防止に必要な間保存し、ご契約の終了や保存先の変更などで必要がなくなったものは削除します。具体的な保存期間と削除の条件は、Google Drive への保存の機能を提供するまでに定め、本ページに記載します。</li>
+          <li><strong>Google の認証情報</strong>：サーバーの秘密情報の保管機能にだけ保存し、連携を取り消すときに削除します。</li>
+          <li><strong>Google Picker のためのアクセストークン</strong>：管理画面のブラウザのメモリの上でだけ使用し、保存しません。</li>
+        </ul>
         <h3>Google API から受け取った情報について行わないこと</h3>
         <ul>
-          <li>広告（パーソナライズド広告を含む）への利用</li>
-          <li>販売、データブローカーなどへの移転</li>
+          <li>広告（パーソナライズド広告、リターゲティング、興味・関心に基づく広告を含む）への利用</li>
+          <li>販売、データブローカーや情報再販業者などへの移転</li>
           <li>本ポリシーに記載した目的以外での利用、および「9. 第三者提供と外部サービス」に記載する場合を除く第三者への提供・転送</li>
-          <li>汎用的な AI・機械学習モデルの開発、改良、学習への利用</li>
+          <li>一般化された（個人向けでない）AI・機械学習モデルや基盤モデルの開発、改良、学習への利用。本アプリは、Google Workspace API をこれらの目的に使用しません</li>
           <li>信用力の判断や融資を目的とした利用</li>
-          <li>人による閲覧（当センターの代表者の同意がある場合、セキュリティ上の問題の調査、法令の遵守に必要な場合を除きます）</li>
+          <li>本章に記載した情報の保存を除く、データベースや恒久的な複製の作成</li>
+          <li>人による閲覧（Google アカウントの利用者が特定のファイルやデータの閲覧に明確に同意し、その記録がある場合、セキュリティ上の問題の調査に必要な場合、法令の遵守に必要な場合を除きます）</li>
         </ul>
-        <p>本アプリによる Google API から受け取った情報の使用および他のアプリへの転送は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>（限定使用の要件を含む）に準拠します。</p>
-        <p lang="en">Shorui Camera's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <h3>Google のポリシーへの準拠</h3>
+        <p>本アプリによる Google API から受け取った情報の使用は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>（限定使用の要件を含む）に準拠します。</p>
+        <p lang="en">Shorui Camera's use of information received from Google APIs will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <p>Google Workspace のスコープから受け取った情報の使用は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google User Data Policy</a>（限定使用の要件を含む）に準拠します。<a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace user data and developer policy</a> もあわせて確認し、取り扱います。</p>
+        <p lang="en">The use of information received from Google Workspace scopes will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google User Data Policy</a>, including the Limited Use requirements.</p>
 
         <h2>8. 保存期間と削除</h2>
         <ul>
           <li><strong>端末に保存した画像</strong><span class="sc-badge sc-badge-ready">提供中</span>：利用者ご自身で削除できます。</li>
           <li><strong>Google Drive に保存した書類</strong><span class="sc-badge sc-badge-plan">準備中</span>：契約期間中は、業務に必要な書類を保存します。契約が終了するときは、お客様と返却・削除の方法を確認します。契約終了後の削除の期限は、個別の契約で定めます。法令上の保存義務がある場合は、その義務を踏まえて取り扱います。</li>
-          <li><strong>管理情報・記録</strong><span class="sc-badge sc-badge-plan">準備中</span>：本アプリの提供と不正利用の防止に必要な間保存し、必要がなくなったものは削除します。</li>
+          <li><strong>管理情報・記録</strong><span class="sc-badge sc-badge-plan">準備中</span>：本アプリの提供と不正利用の防止に必要な間保存し、必要がなくなったものは削除します。Google API から受け取る情報については、「7. Google ユーザーデータの取り扱い」の「保存する場所と期間」に記載します。</li>
         </ul>
         <p>削除のご依頼は、「3. 運営者・お問い合わせ先」へご連絡ください。</p>
-        <p>当センターは、当センターの Google アカウントの設定から、本アプリとの連携をいつでも取り消せます。取り消すと、本アプリは Google Drive へ書類を保存できなくなります。すでに保存した書類はそのまま残ります。</p>
+        <p><span class="sc-badge sc-badge-plan">準備中</span>当センターは、当センターの Google アカウントの設定から、本アプリとの連携をいつでも取り消せます。取り消すと、本アプリは Google Drive へ書類を保存できなくなります。すでに保存した書類はそのまま残ります。連携を取り消すときは、サーバーに保存した Google の認証情報も削除します。</p>
 
         <h2>9. 第三者提供と外部サービス</h2>
         <p>法令に基づく場合を除き、取り扱う情報を第三者へ販売・提供しません。本アプリの提供のために、次の外部サービスを利用します。</p>
         <ul>
-          <li>Cloudflare, Inc.（本アプリの配信、Cloudflare Access による認証、<span class="sc-badge sc-badge-plan">準備中</span>管理情報の保存）：<a href="https://www.cloudflare.com/privacypolicy/">プライバシーポリシー</a></li>
+          <li>Cloudflare, Inc.（本アプリの配信、Cloudflare Access による認証、<span class="sc-badge sc-badge-plan">準備中</span>書類の画像の転送処理、管理情報の保存）：<a href="https://www.cloudflare.com/privacypolicy/">プライバシーポリシー</a></li>
           <li>Google LLC（<span class="sc-badge sc-badge-plan">準備中</span>Google Drive への書類の保存、Google アカウントの認証、Google Picker）：<a href="https://policies.google.com/privacy">プライバシーポリシー</a></li>
         </ul>
 
@@ -146,7 +160,7 @@
         </ul>
 
         <h2>11. 本ポリシーの変更</h2>
-        <p>本アプリの機能や取り扱う情報を変更する場合は、本ページを更新します。Google から受け取る情報を新しい目的で利用するときは、事前に本ページを更新します。</p>
+        <p>本アプリの機能や取り扱う情報を変更する場合は、本ページを更新します。Google から受け取る情報の使い方を変更するときは、事前に本ページを更新し、Google アカウントの利用者に改めて同意を求めます。</p>
       </div>
     </section>
   </main>
