@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- このページは GA4 で計測しない（Google OAuth の説明・規約のページのため）。計測タグを追加しないこと -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>書類撮影アプリ | お助けAI城里センター</title>
+  <meta name="description" content="書類撮影アプリは、お助けAI城里センターが提供する、領収書や請求書などの書類をスマートフォンで撮影し、読みやすい画像に整えるWebアプリです。機能の提供状況と Google Drive の利用目的をご説明します。">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://www.otasuke-ai-shirosato.com/shorui-camera/">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="お助けAI城里センター">
+  <meta property="og:title" content="書類撮影アプリ | お助けAI城里センター">
+  <meta property="og:description" content="書類撮影アプリは、お助けAI城里センターが提供する、領収書や請求書などの書類をスマートフォンで撮影し、読みやすい画像に整えるWebアプリです。機能の提供状況と Google Drive の利用目的をご説明します。">
+  <meta property="og:url" content="https://www.otasuke-ai-shirosato.com/shorui-camera/">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/shorui-camera/shorui-camera.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="shell header-inner sc-header">
+      <a class="brand" href="/" aria-label="お助けAI城里センター トップページへ">
+        <img src="/assets/ai-character-160.png" alt="お助けAI城里センターのキャラクター" width="160" height="160">
+        <span>
+          <strong><span class="nw">お助</span>けAI城里<span class="nw">センター</span></strong>
+          <small><span class="nb">城里町の</span><span class="nb"><span class="nw">ホームページ</span>制作・</span><span class="nb">AI活用支援</span></small>
+        </span>
+      </a>
+      <a class="sc-home" href="/"><span class="nw">トップページ</span>へ</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="sc-hero">
+      <div class="shell sc-shell">
+        <h1>書類撮影アプリ</h1>
+        <p class="sc-lead">領収書や請求書などの書類をスマートフォンで撮影し、読みやすい画像に整えるWebアプリです。</p>
+      </div>
+    </section>
+
+    <section class="sc-body">
+      <div class="shell sc-shell">
+        <h2>書類撮影アプリとは</h2>
+        <p>「書類撮影アプリ」は、お助けAI城里センターが提供する、領収書や請求書などの書類をスマートフォンで撮影し、読みやすい画像に整えるWebアプリです。</p>
+        <p>現在は Cloudflare Access により、当センターが許可した方だけが利用できます。一般の方への提供は行っていません。</p>
+
+        <h2>機能の提供状況</h2>
+        <ul class="sc-status">
+          <li><span class="sc-badge sc-badge-ready">提供中</span><span>書類の撮影</span></li>
+          <li><span class="sc-badge sc-badge-ready">提供中</span><span>画像の自動補正（書類の切り取り、傾き・ゆがみの補正、明るさの調整）</span></li>
+          <li><span class="sc-badge sc-badge-ready">提供中</span><span>撮り直し</span></li>
+          <li><span class="sc-badge sc-badge-ready">提供中</span><span>補正した画像の端末への保存</span></li>
+          <li><span class="sc-badge sc-badge-plan">準備中</span><span>当センターの Google Drive への保存</span></li>
+          <li><span class="sc-badge sc-badge-plan">準備中</span><span>Google Picker による保存先フォルダの選択（当センターの管理者が行います）</span></li>
+          <li><span class="sc-badge sc-badge-plan">準備中</span><span>お客様ごとの管理と、端末の登録</span></li>
+        </ul>
+        <p class="sc-note">提供中の機能では、撮影と補正はご利用の端末の中で行い、画像を当センターのサーバーへ送信しません。</p>
+
+        <h2>Google Drive を利用する目的<span class="sc-h2-badge"><span class="sc-badge sc-badge-plan">準備中</span></span></h2>
+        <p>お客様からお預かりする書類の画像を、お客様ごとのフォルダに分けて当センターが管理するために、当センターの Google Drive を利用する予定です。</p>
+        <ul>
+          <li>連携は、当センターの代表者が当センターの Google アカウントで行います。<strong>お客様に Google アカウントでのログインをお願いすることはありません。</strong></li>
+          <li>Google アカウントに求める権限は <code>https://www.googleapis.com/auth/drive.file</code> だけの予定です。本アプリが作成したファイルと、当センターが Google Picker で選択したフォルダを扱うための権限で、Google Drive 内のその他のファイルを閲覧・検索するためのものではありません。</li>
+          <li>ファイルの共有設定の変更や、公開リンクの作成は行いません。</li>
+          <li>Google から受け取った情報を、広告、販売、汎用的な AI モデルの学習に使用しません。詳しくは<a href="/shorui-camera/privacy/">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+
+        <h2>運営者情報</h2>
+        <dl class="sc-defs">
+          <div><dt>運営者</dt><dd>お助けAI城里センター</dd></div>
+          <div><dt>公式サイト</dt><dd><a href="/">https://www.otasuke-ai-shirosato.com/</a></dd></div>
+          <div><dt>お問い合わせ</dt><dd><a href="/#contact">公式サイトのお問い合わせ</a>に掲載している方法でご連絡ください。</dd></div>
+        </dl>
+
+        <h2>関連ページ</h2>
+        <div class="sc-links">
+          <a class="btn btn-ghost" href="/shorui-camera/privacy/"><span class="nw">プライバシー</span><span class="nw">ポリシー</span></a>
+          <a class="btn btn-ghost" href="/shorui-camera/terms/">利用規約</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© 2026 <span class="nw">お助</span>けAI城里<span class="nw">センター</span></p>
+      <div class="footer-links">
+        <a href="/shorui-camera/">書類撮影<span class="nw">アプリ</span></a>
+        <a href="/shorui-camera/privacy/"><span class="nw">プライバシー</span><span class="nw">ポリシー</span></a>
+        <a href="/shorui-camera/terms/">利用規約</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* ============================================
+   書類撮影アプリの説明ページ（/shorui-camera/ の3ページ）
+   色・文字・ヘッダー・フッター・ボタンはトップページの styles.css をそのまま使い、
+   ここにはこの3ページだけの部品を置く
+   ============================================ */
+
+/* ヘッダー：トップページのメニューの代わりに戻るリンクだけを置く */
+.sc-header { grid-template-columns: 1fr auto; }
+.sc-home {
+  justify-self: end; padding: 10px 18px; border-radius: 999px;
+  border: 2px solid var(--green); color: var(--green); font-weight: 700; font-size: 0.92rem;
+  text-decoration: none; white-space: nowrap;
+}
+.sc-home:hover, .sc-home:focus-visible { background: var(--green-tint); }
+
+.sc-shell { max-width: 860px; }
+
+.sc-hero { padding: 56px 0 40px; background: var(--bg); }
+.sc-hero h1 { margin: 0; font-size: clamp(1.9rem, 4.4vw, 2.6rem); line-height: 1.35; letter-spacing: 0.02em; }
+.sc-lead { margin: 16px 0 0; color: var(--text-sub); font-size: 1.05rem; }
+.sc-date { margin: 10px 0 0; color: var(--text-note); font-size: 0.92rem; }
+
+.sc-body { padding: 16px 0 72px; background: var(--bg-white); }
+.sc-body h2 { margin: 44px 0 14px; font-size: clamp(1.25rem, 2.6vw, 1.5rem); line-height: 1.5; color: var(--green-dark); }
+.sc-body h3 { margin: 24px 0 8px; font-size: 1.05rem; line-height: 1.55; }
+.sc-body p { margin: 0 0 14px; }
+.sc-body ul, .sc-body ol { margin: 0 0 14px; padding-left: 1.4em; display: grid; gap: 6px; }
+.sc-body a:not(.btn) { color: var(--green); font-weight: 700; overflow-wrap: anywhere; }
+.sc-body code { padding: 1px 6px; border-radius: 6px; background: var(--green-tint); font-size: 0.9em; overflow-wrap: anywhere; }
+.sc-note { color: var(--text-sub); }
+
+/* 提供中／準備中のラベル */
+.sc-badge {
+  display: inline-block; margin: 0 4px; padding: 1px 9px; border-radius: 999px;
+  font-size: 0.78rem; font-weight: 700; line-height: 1.6; white-space: nowrap; vertical-align: 0.08em;
+}
+.sc-badge-ready { background: var(--green-soft); color: var(--green-dark); }
+.sc-badge-plan { background: var(--accent-soft); color: var(--accent-ink); }
+.sc-h2-badge { margin-left: 6px; }
+
+.sc-body ul.sc-status { list-style: none; padding: 0; gap: 0; border-top: 1px solid var(--line); }
+.sc-status li { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.sc-status .sc-badge { margin: 3px 0 0; }
+
+.sc-defs { margin: 0 0 14px; border-top: 1px solid var(--line); }
+.sc-defs > div { display: grid; grid-template-columns: 9rem 1fr; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.sc-defs dt { font-weight: 700; color: var(--green-dark); }
+.sc-defs dd { margin: 0; min-width: 0; }
+
+.sc-links { display: flex; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 560px) {
+  .sc-defs > div { grid-template-columns: 1fr; }
+  .sc-home { padding: 8px 12px; font-size: 0.82rem; white-space: normal; text-align: center; }
+}
