@@ -820,7 +820,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .worries-grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 56px; align-items: center; }
 .person-thinking { width: 100%; max-width: 400px; justify-self: end; }
 
-/* 料金：人物は左、手の先（右上）に 10,000円と安心材料 */
+/* 料金：人物は左、手の先（右上）に 11,000円と安心材料 */
 .price-stage.has-person {
   display: grid; grid-template-columns: auto auto; justify-content: center; align-items: center;
   gap: 8px 36px; text-align: left;
@@ -847,7 +847,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
   .person-thinking { order: 3; justify-self: start; width: 62%; max-width: 240px; margin-top: 20px; }
   .worry-answer { order: 4; margin-top: 0; }
 
-  /* 料金：10,000円を先頭に。その下で、左の人物が右上の安心材料を手で紹介する */
+  /* 料金：11,000円を先頭に。その下で、左の人物が右上の安心材料を手で紹介する */
   .price-stage.has-person { grid-template-columns: 1fr; justify-items: stretch; text-align: center; gap: 0; }
   .price-stage-info { order: 1; padding-bottom: 0; position: relative; z-index: 1; }
   .has-person .price-big { justify-content: center; }
