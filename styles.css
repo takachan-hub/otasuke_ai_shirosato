@@ -612,9 +612,18 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .profile-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
 .profile-badges li { padding: 2px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.14); color: #fff; font-size: 0.8rem; font-weight: 700; }
 .operator-detail { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 10px; margin: 10px 0 0; font-size: 0.86rem; }
-.operator-detail + .operator-detail { margin-top: 0; }
-.operator-link { display: inline-flex; align-items: center; gap: 0 4px; min-height: 44px; color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.5); text-underline-offset: 4px; }
-.operator-link:hover { text-decoration-color: #fff; }
+/* 自動リンクの指定が効かない iOS でも、登録番号をリンクの見た目にしない */
+.operator-detail a[x-apple-data-detectors] { color: inherit; text-decoration: none; }
+.operator-more { margin: 10px 0 0; }
+.operator-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 8px 16px; border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 10px;
+  color: #fff; font-weight: 700; font-size: 0.86rem; text-decoration: none;
+  transition: background-color 0.2s;
+}
+.operator-link svg { width: 16px; height: 16px; flex: 0 0 16px; }
+.operator-link:hover, .operator-link:focus-visible { background: rgba(255, 255, 255, 0.14); }
+.operator-link:focus-visible { outline-color: #fff; }
 .contact-sub { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 16px; margin-top: 28px; text-align: left; }
 .line-box {
   display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 2px 16px;
