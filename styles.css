@@ -611,6 +611,7 @@ p, li, dd, figcaption { line-break: strict; text-wrap: pretty; }
 .name-kana { font-size: 0.82rem; opacity: 0.85; }
 .profile-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
 .profile-badges li { padding: 2px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.14); color: #fff; font-size: 0.8rem; font-weight: 700; }
+.operator-invoice { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 10px; margin: 10px 0 0; font-size: 0.86rem; }
 .contact-sub { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 16px; margin-top: 28px; text-align: left; }
 .line-box {
   display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 2px 16px;
